@@ -1,8 +1,8 @@
 extends Node2D
 class_name GameContainer
 
-@onready var main_menu_scene = preload("res://menus/main_menu.tscn")
-@onready var room_scene = preload("res://interior/interrogation_room.tscn")
+@onready var main_menu_scene = preload("res://assets/menus/main_menu.tscn")
+@onready var room_scene = preload("res://assets/interior/interrogation_room.tscn")
 
 func _ready():
 	spawn_main_menu()
