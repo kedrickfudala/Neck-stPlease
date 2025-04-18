@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://5wmpmkmkrwit"]
+
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_kq1s7"]
+
+[node name="InterrogationRoom" type="Node2D"]
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_right = 1162.0
+offset_bottom = 659.0
+mouse_filter = 2
+color = Color(0.165025, 0.150535, 0.156173, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 443.0
+offset_bottom = 651.0
+mouse_filter = 2
+color = Color(0.147982, 0.0720009, 4.21144e-08, 1)
+
+[node name="DocumentTemplate" parent="." instance=ExtResource("1_kq1s7")]
+position = Vector2(663, 269)

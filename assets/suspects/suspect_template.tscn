@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpnj5hy1hs5y"]
+
+[ext_resource type="Script" path="res://assets/suspects/suspect_template.gd" id="1_vmtnb"]
+
+[node name="SuspectTemplate" type="Node2D"]
+script = ExtResource("1_vmtnb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
