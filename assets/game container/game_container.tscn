@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://assets/game container/game_container.gd" id="1_ppj3c"]
 
 [node name="GameContainer" type="Node2D"]
+scale = Vector2(1.00282, 1)
 script = ExtResource("1_ppj3c")
