@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpnj5hy1hs5y"]
+[gd_scene load_steps=3 format=3 uid="uid://bpnj5hy1hs5y"]
 
 [ext_resource type="Script" path="res://assets/suspects/suspect_template.gd" id="1_vmtnb"]
+[ext_resource type="Texture2D" uid="uid://4mlhoaqfla6c" path="res://icon.svg" id="2_y2kkg"]
 
 [node name="SuspectTemplate" type="Node2D"]
+z_index = 1
 script = ExtResource("1_vmtnb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_y2kkg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 82.0
+offset_top = -16.0
+offset_right = 344.0
+offset_bottom = 40.0
+text = "text"
