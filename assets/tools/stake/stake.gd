@@ -1,4 +1,5 @@
 extends TextureButton
+class_name Stake
 
 @onready var hovered : bool = false
 

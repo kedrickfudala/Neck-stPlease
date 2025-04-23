@@ -1,21 +1,21 @@
 extends TextureButton
+class_name MagGlassTool
 
 @onready var hovered : bool = false
-@onready var selected : bool = false
 
 func _physics_process(delta: float) -> void:
 	$Label.text = str("mag glass\ninvestigate discrepencies")
 	$Label.visible = hovered
-	if selected:
+	if get_parent().mag_glass:
 		modulate = Color(0,1,0)
 	else:
 		modulate = Color(1,1,1)
 
 func _on_pressed() -> void:
-	if selected:
-		selected = false
+	if get_parent().mag_glass:
+		get_parent().mag_glass = false
 	else:
-		selected = true
+		get_parent().mag_glass = true
 
 func _on_mouse_entered() -> void:
 	hovered = true

@@ -1,4 +1,5 @@
 extends TextureButton
+class_name GreenButton
 
 @onready var hovered : bool = false
 
