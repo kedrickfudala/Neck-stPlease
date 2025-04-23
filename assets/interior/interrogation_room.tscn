@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://5wmpmkmkrwit"]
+[gd_scene load_steps=6 format=3 uid="uid://5wmpmkmkrwit"]
 
-[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_kq1s7"]
 [ext_resource type="Script" path="res://assets/interior/interrogation_room.gd" id="1_ouyoa"]
 [ext_resource type="PackedScene" uid="uid://e3y1lsymtrw8" path="res://assets/tools/garlic/garlic.tscn" id="3_ogv08"]
 [ext_resource type="PackedScene" uid="uid://d1djvx34lb23g" path="res://assets/tools/green button/green_button.tscn" id="4_3het6"]
+[ext_resource type="PackedScene" uid="uid://weyekqshii8q" path="res://assets/tools/stake/stake.tscn" id="4_45fqt"]
+[ext_resource type="PackedScene" uid="uid://brk1jqax3kafs" path="res://assets/tools/mag glass/mag_glass.tscn" id="5_b62qn"]
 
 [node name="InterrogationRoom" type="Node2D"]
 script = ExtResource("1_ouyoa")
@@ -40,17 +41,28 @@ offset_bottom = 672.0
 mouse_filter = 2
 color = Color(0.045885, 0.0149926, 9.02452e-09, 1)
 
-[node name="DocumentTemplate" parent="." instance=ExtResource("1_kq1s7")]
-position = Vector2(663, 269)
-
 [node name="Garlic" parent="." instance=ExtResource("3_ogv08")]
-offset_left = 766.0
-offset_top = 379.0
-offset_right = 894.0
-offset_bottom = 507.0
+offset_left = 776.0
+offset_top = 193.0
+offset_right = 904.0
+offset_bottom = 321.0
+scale = Vector2(0.8, 0.8)
 
 [node name="GreenButton" parent="." instance=ExtResource("4_3het6")]
-offset_left = 608.0
-offset_top = 460.0
+offset_left = 746.0
+offset_top = 461.0
+offset_right = 874.0
+offset_bottom = 589.0
+
+[node name="Stake" parent="." instance=ExtResource("4_45fqt")]
+offset_left = 480.0
+offset_top = 405.0
 offset_right = 736.0
-offset_bottom = 588.0
+offset_bottom = 661.0
+
+[node name="MagGlass" parent="." instance=ExtResource("5_b62qn")]
+offset_left = 780.0
+offset_top = 103.0
+offset_right = 908.0
+offset_bottom = 231.0
+scale = Vector2(0.8, 0.8)

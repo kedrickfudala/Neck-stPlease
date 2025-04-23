@@ -11,8 +11,16 @@ script = ExtResource("1_vmtnb")
 texture = ExtResource("2_y2kkg")
 
 [node name="Label" type="Label" parent="."]
+z_index = 20
+z_as_relative = false
 offset_left = 82.0
 offset_top = -16.0
 offset_right = 344.0
 offset_bottom = 40.0
 text = "text"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

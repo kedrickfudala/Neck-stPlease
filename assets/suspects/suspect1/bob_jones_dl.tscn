@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dewf3afuq2b86"]
+
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_fpb2o"]
+[ext_resource type="Texture2D" uid="uid://c2tdmx8mj28p" path="res://assets/suspects/suspect1/bobjonesdl.png" id="2_hjhea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owdep"]
+size = Vector2(282, 217)
+
+[node name="BobJonesDL" instance=ExtResource("1_fpb2o")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_hjhea")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(4, -14.5)
+shape = SubResource("RectangleShape2D_owdep")
