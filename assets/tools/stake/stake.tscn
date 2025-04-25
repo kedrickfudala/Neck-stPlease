@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://weyekqshii8q"]
+
+[ext_resource type="Texture2D" uid="uid://c8wgr7122n4sn" path="res://assets/tools/stake/stake.png" id="1_b6ouk"]
+[ext_resource type="Script" path="res://assets/tools/stake/stake.gd" id="2_qx8uv"]
+
+[node name="Stake" type="TextureButton"]
+z_index = 10
+offset_left = -75.0
+offset_top = -81.0
+offset_right = 181.0
+offset_bottom = 175.0
+texture_normal = ExtResource("1_b6ouk")
+script = ExtResource("2_qx8uv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 144.0
+offset_bottom = 103.0
+text = "stake"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

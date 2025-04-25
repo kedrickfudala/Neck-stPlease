@@ -15,6 +15,16 @@ run/main_scene="res://assets/game container/game_container.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=900
+window/size/viewport_height=600
+window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom_font="res://assets/documents/Abaddon Bold.ttf"
+
 [input]
 
 left_click={
@@ -25,5 +35,7 @@ left_click={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/screen_space_roughness_limiter/enabled=false

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dewf3afuq2b86"]
+
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_fpb2o"]
+[ext_resource type="Texture2D" uid="uid://c2tdmx8mj28p" path="res://assets/suspects/suspect1/bobjonesdl.png" id="2_hjhea"]
+[ext_resource type="Script" path="res://assets/suspects/suspect1/bob_jones_dl.gd" id="2_qrg8x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owdep"]
+size = Vector2(282, 217)
+
+[sub_resource type="Gradient" id="Gradient_i6ed1"]
+colors = PackedColorArray(0, 1, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bbmpk"]
+gradient = SubResource("Gradient_i6ed1")
+width = 100
+height = 32
+
+[node name="BobJonesDL" instance=ExtResource("1_fpb2o")]
+script = ExtResource("2_qrg8x")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_hjhea")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(4, -14.5)
+shape = SubResource("RectangleShape2D_owdep")
+
+[node name="NameButton" type="TextureButton" parent="." index="2"]
+offset_left = -33.0
+offset_top = -69.0
+offset_right = 137.0
+offset_bottom = -37.0
+texture_hover = SubResource("GradientTexture2D_bbmpk")
+
+[node name="TextureButton" type="TextureButton" parent="." index="3"]
+offset_left = -31.0
+offset_top = -12.0
+offset_right = 137.0
+offset_bottom = 19.0
+
+[connection signal="pressed" from="NameButton" to="." method="_on_name_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

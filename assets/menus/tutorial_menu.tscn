@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddsjog2t4xfik"]
+
+[ext_resource type="Script" path="res://assets/menus/tutorial_menu.gd" id="1_losbj"]
+
+[node name="TutorialMenu" type="CanvasLayer"]
+script = ExtResource("1_losbj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 914.0
+offset_bottom = 611.0
+color = Color(0.0646965, 0.0646965, 0.0646965, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 180.0
+offset_top = 55.0
+offset_right = 725.0
+offset_bottom = 461.0
+text = "Welcome to Neckst-Please
+
+In this game, a vampire outbreak has swept across the United States, infecting the population. We don't know how it started, but vampires are slowly taking over.
+
+You are a farmer living in the small town of Kedricksville, Ohio. It is night, and townsfolk have come to you seeking refuge.
+
+But are the people who come to your door humans or vampires? You must determine which they are. Either allow them passage or stake them through the heart. Guess wrong and you lose.
+
+You can use the tools on your deck to help you make a determination, and you may ask questions about each person's physical traits.
+
+Good luck."
+
+[node name="Button" type="Button" parent="."]
+offset_left = 340.0
+offset_top = 490.0
+offset_right = 568.0
+offset_bottom = 563.0
+text = "Begin"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

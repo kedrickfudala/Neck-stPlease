@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://4fu7uski5qm1"]
+
+[ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_qt570"]
+[ext_resource type="Texture2D" uid="uid://b1ilg68q271kv" path="res://assets/suspects/suspect1/idle_animation_sheet.png" id="2_ckgfo"]
+[ext_resource type="PackedScene" uid="uid://dewf3afuq2b86" path="res://assets/suspects/suspect1/bob_jones_dl.tscn" id="2_xxsgj"]
+
+[node name="Suspect1" instance=ExtResource("1_qt570")]
+entrance_text = "Hey, could you let me in?"
+garlic_response = "Why are you offering me garlic?"
+cross_response = "Oh, are you religious too?"
+allow_response = "Thanks, I knew I could rely on you"
+name_response = "Yep, thats my name"
+birth_response = "Born and raised here in Kedricksville"
+documents = Array[PackedScene]([ExtResource("2_xxsgj")])
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-3, 109)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ckgfo")
+hframes = 7
+
+[node name="Timer" parent="." index="2"]
+wait_time = 3.5
