@@ -2,9 +2,12 @@ extends Node2D
 class_name SuspectTemplate
 
 @export var is_vampire : bool
+@export var entrance_text : String
 @export var garlic_response : String
 @export var cross_response : String
 @export var allow_response : String
+@export var name_response : String
+@export var birth_response : String
 @onready var allowed : bool = false
 
 @export var documents : Array[PackedScene] = []
@@ -15,6 +18,8 @@ func _ready():
 	var move_tween = create_tween()
 	move_tween.tween_property(self, "global_position", Vector2(120, 120), 1.5)
 	await move_tween.finished
+	$Label.text = entrance_text
+	$Timer.start()
 	spawn_documents()
 
 func ask_garlic(): #overload this
@@ -23,6 +28,14 @@ func ask_garlic(): #overload this
 
 func ask_cross():
 	$Label.text = cross_response
+	$Timer.start()
+
+func ask_name():
+	$Label.text = name_response
+	$Timer.start()
+
+func ask_birth():
+	$Label.text = birth_response
 	$Timer.start()
 
 func allow_passage():

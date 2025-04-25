@@ -3,8 +3,10 @@ class_name DocumentTemplate
 
 var selected : bool = false
 
+@onready var suspect = get_parent().get_parent()
+
 func _physics_process(delta: float) -> void:
-	if selected && !get_parent().get_parent().get_parent().mag_glass:
+	if selected && !suspect.get_parent().mag_glass:
 		var move_tween = create_tween()
 		move_tween.tween_property(self, "global_position", get_global_mouse_position(), 0.3).set_ease(Tween.EASE_IN)
 		if Input.is_action_just_released("left_click"):
