@@ -9,6 +9,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	get_parent().green_button_pressed()
+	$AudioStreamPlayer2D.play()
+	
 
 func _on_mouse_entered() -> void:
 	hovered = true

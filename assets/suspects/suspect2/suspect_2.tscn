@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://3621qxrdgwct"]
+
+[ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_fc6bn"]
+
+[node name="Suspect 2" instance=ExtResource("1_fc6bn")]
