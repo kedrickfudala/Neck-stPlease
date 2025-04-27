@@ -10,15 +10,31 @@ class_name SuspectTemplate
 @export_multiline var name_response : String
 @export_multiline var birth_response : String
 
-@onready var allowed : bool = false
-@onready var staked : bool = false
+@export_multiline var teeth_response : String
+@export_multiline var stain_response : String
 
 @export var documents : Array[PackedScene] = []
+
+@export var entrance_expr : Texture
+@export var idle_expr : Texture
+@export var garlic_expr : Texture
+@export var cross_expr : Texture
+@export var name_expr : Texture
+@export var birth_expr : Texture
+@export var allow_expr : Texture
+@export var staked_expr : Texture
+
+@export var teeth_expr : Texture
+@export var stain_expr : Texture
+
+@onready var allowed : bool = false
+@onready var staked : bool = false
+@onready var flee : bool = false
 
 func _ready():
 	$Sprite2D.modulate = Color(0,0,0)
 	$Label.text = str("")
-	#spawn_documents()
+	$Sprite2D.texture = entrance_expr
 	var move_tween = create_tween()
 	move_tween.tween_property(self, "global_position", Vector2(140, global_position.y), 1.5)
 	await move_tween.finished
@@ -29,29 +45,45 @@ func _ready():
 	$Label.text = entrance_text
 	spawn_documents()
 
-func ask_garlic(): #overload this
+func ask_garlic():
 	$Label.text = garlic_response
+	$Sprite2D.texture = garlic_expr
 	$Timer.start()
 
 func ask_cross():
 	$Label.text = cross_response
+	$Sprite2D.texture = cross_expr
 	$Timer.start()
 
 func ask_name():
 	$Label.text = name_response
+	$Sprite2D.texture = name_expr
 	$Timer.start()
 
 func ask_birth():
 	$Label.text = birth_response
+	$Sprite2D.texture = birth_expr
+	$Timer.start()
+	
+func ask_teeth():
+	$Label.text = teeth_response
+	$Sprite2D.texture = teeth_expr
+	$Timer.start()
+
+func ask_stain():
+	$Label.text = stain_response
+	$Sprite2D.texture = stain_expr
 	$Timer.start()
 
 func allow():
 	$Label.text = allow_response
+	$Sprite2D.texture = allow_expr
 	allowed = true
 	$Timer.start()
 
 func stake():
 	$Label.text = staked_response
+	$Sprite2D.texture = staked_expr
 	staked = true
 	$Timer.start()
 
@@ -71,5 +103,11 @@ func _on_timer_timeout() -> void:
 		await move_tween.finished
 		get_parent().next_suspect()
 		self.queue_free()
-	if staked:
-		pass
+	elif staked:
+		for child in $Documents.get_children():
+			$Documents.remove_child(child)
+	elif flee:
+		for child in $Documents.get_children():
+			$Documents.remove_child(child)
+	else:
+		$Sprite2D.texture = idle_expr

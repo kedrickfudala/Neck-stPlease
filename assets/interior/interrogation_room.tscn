@@ -1,57 +1,99 @@
-[gd_scene load_steps=7 format=3 uid="uid://5wmpmkmkrwit"]
+[gd_scene load_steps=10 format=3 uid="uid://5wmpmkmkrwit"]
 
 [ext_resource type="Script" path="res://assets/interior/interrogation_room.gd" id="1_ouyoa"]
+[ext_resource type="Shader" path="res://assets/resources/paint_mix.gdshader" id="2_5ob8h"]
 [ext_resource type="Texture2D" uid="uid://c0aj2ccr0ns2j" path="res://assets/interior/8d2236e7-476c-4467-b137-bfc36a564ebc.jpg" id="2_wgbdg"]
 [ext_resource type="PackedScene" uid="uid://e3y1lsymtrw8" path="res://assets/tools/garlic/garlic.tscn" id="3_ogv08"]
 [ext_resource type="PackedScene" uid="uid://d1djvx34lb23g" path="res://assets/tools/green button/green_button.tscn" id="4_3het6"]
 [ext_resource type="PackedScene" uid="uid://weyekqshii8q" path="res://assets/tools/stake/stake.tscn" id="4_45fqt"]
 [ext_resource type="PackedScene" uid="uid://brk1jqax3kafs" path="res://assets/tools/mag glass/mag_glass.tscn" id="5_b62qn"]
+[ext_resource type="PackedScene" uid="uid://c23dphnh15yff" path="res://assets/tools/cross/cross.tscn" id="8_gyg81"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqglm"]
+shader = ExtResource("2_5ob8h")
+shader_parameter/polar_coordinates = false
+shader_parameter/polar_center = Vector2(0.5, 0.5)
+shader_parameter/polar_zoom = 1.0
+shader_parameter/polar_repeat = 1.0
+shader_parameter/spin_rotation = null
+shader_parameter/spin_speed = 12.69
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/colour_1 = Color(0, 0, 0, 1)
+shader_parameter/colour_2 = Color(0.14547, 9.18816e-05, 0.199405, 1)
+shader_parameter/colour_3 = Color(0.162651, 8.12206e-08, 0.0801295, 1)
+shader_parameter/contrast = 0.845
+shader_parameter/spin_amount = 0.125
+shader_parameter/pixel_filter = 700.0
 
 [node name="InterrogationRoom" type="Node2D"]
 script = ExtResource("1_ouyoa")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 300.0
-offset_bottom = 404.0
-mouse_filter = 2
-color = Color(0, 0.0313726, 0.156863, 1)
+[node name="Control" type="Control" parent="."]
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Control"]
+z_as_relative = false
+material = SubResource("ShaderMaterial_hqglm")
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 389.0
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
 z_index = 5
+layout_mode = 0
 offset_left = 298.0
 offset_right = 900.0
 offset_bottom = 600.0
 mouse_filter = 2
 color = Color(0.158756, 0.086135, 0.113207, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="ColorRect3" type="ColorRect" parent="Control"]
 z_index = 5
+layout_mode = 0
 offset_top = 389.0
 offset_right = 900.0
 offset_bottom = 600.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
 z_index = 6
 z_as_relative = false
-position = Vector2(612, 316)
-scale = Vector2(0.6, 0.618359)
+position = Vector2(602.4, 316)
+scale = Vector2(0.58125, 0.618359)
 texture = ExtResource("2_wgbdg")
 
-[node name="ColorRect4" type="ColorRect" parent="."]
+[node name="ColorRect4" type="ColorRect" parent="Control"]
 z_index = 6
+layout_mode = 0
 offset_left = 298.0
 offset_right = 310.0
 offset_bottom = 600.0
 mouse_filter = 2
 color = Color(0.045885, 0.0149926, 9.02452e-09, 1)
 
+[node name="Label" type="Label" parent="Control"]
+modulate = Color(0.226707, 0.226707, 0.226707, 1)
+z_index = 7
+z_as_relative = false
+layout_mode = 0
+offset_left = 38.0
+offset_top = 571.0
+offset_right = 267.0
+offset_bottom = 624.0
+text = "Drag documents to your table ->"
+
 [node name="Garlic" parent="." instance=ExtResource("3_ogv08")]
-offset_left = 759.0
-offset_top = 182.0
-offset_right = 887.0
-offset_bottom = 310.0
+offset_left = 749.0
+offset_top = 165.0
+offset_right = 877.0
+offset_bottom = 293.0
 
 [node name="GreenButton" parent="." instance=ExtResource("4_3het6")]
 offset_left = 746.0
@@ -66,17 +108,13 @@ offset_right = 736.0
 offset_bottom = 661.0
 
 [node name="MagGlass" parent="." instance=ExtResource("5_b62qn")]
-offset_left = 757.0
-offset_top = 72.0
-offset_right = 885.0
-offset_bottom = 200.0
+offset_left = 755.0
+offset_top = 34.0
+offset_right = 883.0
+offset_bottom = 162.0
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(0.226707, 0.226707, 0.226707, 1)
-z_index = 7
-z_as_relative = false
-offset_left = 38.0
-offset_top = 571.0
-offset_right = 267.0
-offset_bottom = 624.0
-text = "Drag documents to your table ->"
+[node name="cross" parent="." instance=ExtResource("8_gyg81")]
+offset_left = 753.0
+offset_top = 303.0
+offset_right = 881.0
+offset_bottom = 431.0

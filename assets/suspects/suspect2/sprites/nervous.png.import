@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ilg68q271kv"
-path="res://.godot/imported/idle_animation_sheet.png-e8be867bf083ba3732f5ade38ce57387.ctex"
+uid="uid://by0ml6x1ygibj"
+path="res://.godot/imported/nervous.png-981d4e2f3c634a497b3931c78ef75efb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/suspects/suspect1/idle_animation_sheet.png"
-dest_files=["res://.godot/imported/idle_animation_sheet.png-e8be867bf083ba3732f5ade38ce57387.ctex"]
+source_file="res://assets/suspects/suspect2/sprites/nervous.png"
+dest_files=["res://.godot/imported/nervous.png-981d4e2f3c634a497b3931c78ef75efb.ctex"]
 
 [params]
 

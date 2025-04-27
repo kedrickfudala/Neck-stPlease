@@ -11,7 +11,6 @@ func _ready():
 	spawn_main_menu()
 	var blackout_tween = create_tween()
 	blackout_tween.tween_property($ColorRect, "modulate", Color(1,1,1,0), 5)
-	$AudioStreamPlayer2D.play()
 	
 func spawn_main_menu():
 	var main_menu_inst = main_menu_scene.instantiate()
@@ -29,5 +28,6 @@ func spawn_room():
 	add_child(room_inst)
 
 func spawn_game_over_menu():
+	get_tree().paused = true
 	var game_over_menu_inst = game_over_menu_scene.instantiate()
 	add_child(game_over_menu_inst)

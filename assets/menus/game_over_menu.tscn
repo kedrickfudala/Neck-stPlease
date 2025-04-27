@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blcla3hv63mrv"]
 
 [node name="GameOverMenu" type="CanvasLayer"]
+process_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -30.0
@@ -10,10 +11,10 @@ offset_bottom = 628.0
 color = Color(0.122252, 0.122252, 0.122252, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 217.0
-offset_top = 211.0
-offset_right = 664.0
-offset_bottom = 410.0
+offset_left = 231.0
+offset_top = 213.0
+offset_right = 678.0
+offset_bottom = 412.0
 theme_override_font_sizes/font_size = 51
 text = "you guessed wrong!
 game over!"

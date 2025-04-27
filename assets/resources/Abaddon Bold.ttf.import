@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b2ydayso8e0fx"
-path="res://.godot/imported/Abaddon Bold.ttf-2159e75fe1eaac9887a190ec9fa06153.fontdata"
+path="res://.godot/imported/Abaddon Bold.ttf-73508207341782b7d110b8dcf2034b48.fontdata"
 
 [deps]
 
-source_file="res://assets/documents/Abaddon Bold.ttf"
-dest_files=["res://.godot/imported/Abaddon Bold.ttf-2159e75fe1eaac9887a190ec9fa06153.fontdata"]
+source_file="res://assets/resources/Abaddon Bold.ttf"
+dest_files=["res://.godot/imported/Abaddon Bold.ttf-73508207341782b7d110b8dcf2034b48.fontdata"]
 
 [params]
 

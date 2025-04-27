@@ -23,7 +23,7 @@ window/stretch/mode="viewport"
 
 [gui]
 
-theme/custom_font="res://assets/documents/Abaddon Bold.ttf"
+theme/custom_font="res://assets/resources/Abaddon Bold.ttf"
 
 [input]
 
