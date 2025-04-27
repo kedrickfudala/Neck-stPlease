@@ -18,7 +18,7 @@ func next_suspect():
 
 func spawn_suspect(index : int):
 	var suspect_inst = suspects[index].instantiate()
-	suspect_inst.global_position = Vector2(-300,120)
+	suspect_inst.global_position = Vector2(-200,475)
 	add_child(suspect_inst)
 	current_suspect = suspect_inst
 
@@ -27,16 +27,14 @@ func garlic_pressed():
 		current_suspect.ask_garlic()
 
 func green_button_pressed():
-	if !current_suspect.is_vampire:
-		current_suspect.allow_passage()
-		pass
+	if current_suspect and !current_suspect.is_vampire:
+		current_suspect.allow()
 	else:
 		game_over()
 
 func stake_pressed():
-	if current_suspect.is_vampire:
-		#you were right
-		pass
+	if current_suspect and current_suspect.is_vampire:
+		current_suspect.stake()
 	else:
 		game_over()
 

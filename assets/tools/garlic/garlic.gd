@@ -1,7 +1,7 @@
 extends TextureButton
 class_name GarlicTool
 
-@onready var uses : int = 3
+@onready var uses : int = 2
 @onready var hovered : bool = false
 
 func _physics_process(delta: float) -> void:

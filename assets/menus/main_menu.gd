@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 class_name MainMenu
 
 func _on_button_pressed() -> void:

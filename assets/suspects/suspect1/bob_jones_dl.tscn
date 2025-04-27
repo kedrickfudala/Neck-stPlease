@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dewf3afuq2b86"]
+[gd_scene load_steps=5 format=3 uid="uid://dewf3afuq2b86"]
 
 [ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_fpb2o"]
 [ext_resource type="Texture2D" uid="uid://c2tdmx8mj28p" path="res://assets/suspects/suspect1/bobjonesdl.png" id="2_hjhea"]
@@ -6,14 +6,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owdep"]
 size = Vector2(282, 217)
-
-[sub_resource type="Gradient" id="Gradient_i6ed1"]
-colors = PackedColorArray(0, 1, 0, 1, 0, 1, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_bbmpk"]
-gradient = SubResource("Gradient_i6ed1")
-width = 100
-height = 32
 
 [node name="BobJonesDL" instance=ExtResource("1_fpb2o")]
 script = ExtResource("2_qrg8x")
@@ -27,16 +19,29 @@ shape = SubResource("RectangleShape2D_owdep")
 
 [node name="NameButton" type="TextureButton" parent="." index="2"]
 offset_left = -33.0
-offset_top = -69.0
-offset_right = 137.0
-offset_bottom = -37.0
-texture_hover = SubResource("GradientTexture2D_bbmpk")
+offset_top = -68.0
+offset_right = 132.0
+offset_bottom = -32.0
+
+[node name="ColorRect" type="ColorRect" parent="NameButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_right = 165.0
+offset_bottom = 35.0
+mouse_filter = 2
 
 [node name="TextureButton" type="TextureButton" parent="." index="3"]
 offset_left = -31.0
 offset_top = -12.0
 offset_right = 137.0
 offset_bottom = 19.0
+
+[node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_right = 164.0
+offset_bottom = 32.0
+mouse_filter = 2
 
 [connection signal="pressed" from="NameButton" to="." method="_on_name_button_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

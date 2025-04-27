@@ -8,6 +8,7 @@ func _physics_process(delta: float) -> void:
 	$Label.visible = hovered
 
 func _on_pressed() -> void:
+	$AudioStreamPlayer2D.play()
 	get_parent().stake_pressed()
 
 func _on_mouse_entered() -> void:

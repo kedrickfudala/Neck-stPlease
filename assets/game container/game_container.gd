@@ -7,14 +7,20 @@ class_name GameContainer
 @onready var game_over_menu_scene = preload("res://assets/menus/game_over_menu.tscn")
 
 func _ready():
+	$ColorRect.modulate = Color(1,1,1,1)
 	spawn_main_menu()
+	var blackout_tween = create_tween()
+	blackout_tween.tween_property($ColorRect, "modulate", Color(1,1,1,0), 5)
+	$AudioStreamPlayer2D.play()
 	
 func spawn_main_menu():
 	var main_menu_inst = main_menu_scene.instantiate()
+	main_menu_inst.global_position = Vector2(0,0)
 	add_child(main_menu_inst)
 
 func spawn_tutorial():
 	var tutorial_inst = tutorial_scene.instantiate()
+	tutorial_inst.global_position = Vector2(0,0)
 	add_child(tutorial_inst)
 
 func spawn_room():
