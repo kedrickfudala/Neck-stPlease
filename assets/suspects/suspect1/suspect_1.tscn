@@ -5,19 +5,27 @@
 [ext_resource type="PackedScene" uid="uid://dewf3afuq2b86" path="res://assets/suspects/suspect1/bob_jones_dl.tscn" id="2_xxsgj"]
 
 [node name="Suspect1" instance=ExtResource("1_qt570")]
-entrance_text = "Hey, could you let me in?"
+entrance_text = "Hey, could you let me in?
+Here's my ID"
 garlic_response = "Why are you offering me garlic?"
 cross_response = "Oh, are you religious too?"
 allow_response = "Thanks, I knew I could rely on you"
+staked_response = "Why... what did I do...?"
 name_response = "Yep, thats my name"
 birth_response = "Born and raised here in Kedricksville"
 documents = Array[PackedScene]([ExtResource("2_xxsgj")])
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(-3, 109)
-scale = Vector2(0.8, 0.8)
+position = Vector2(0, -183)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ckgfo")
 hframes = 7
+
+[node name="Label" parent="." index="1"]
+offset_left = 108.0
+offset_top = -250.0
+offset_right = 370.0
+offset_bottom = -194.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.5
