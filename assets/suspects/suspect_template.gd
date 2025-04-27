@@ -10,9 +10,8 @@ class_name SuspectTemplate
 @export_multiline var name_response : String
 @export_multiline var birth_response : String
 
-@export_multiline var teeth_reponse : String
-@export_multiline var stain_reponse : String
-@export_multiline var eyes_reponse : String
+@export_multiline var teeth_response : String
+@export_multiline var stain_response : String
 
 @export var documents : Array[PackedScene] = []
 
@@ -25,8 +24,12 @@ class_name SuspectTemplate
 @export var allow_expr : Texture
 @export var staked_expr : Texture
 
+@export var teeth_expr : Texture
+@export var stain_expr : Texture
+
 @onready var allowed : bool = false
 @onready var staked : bool = false
+@onready var flee : bool = false
 
 func _ready():
 	$Sprite2D.modulate = Color(0,0,0)
@@ -61,6 +64,16 @@ func ask_birth():
 	$Label.text = birth_response
 	$Sprite2D.texture = birth_expr
 	$Timer.start()
+	
+func ask_teeth():
+	$Label.text = teeth_response
+	$Sprite2D.texture = teeth_expr
+	$Timer.start()
+
+func ask_stain():
+	$Label.text = stain_response
+	$Sprite2D.texture = stain_expr
+	$Timer.start()
 
 func allow():
 	$Label.text = allow_response
@@ -91,6 +104,9 @@ func _on_timer_timeout() -> void:
 		get_parent().next_suspect()
 		self.queue_free()
 	elif staked:
+		for child in $Documents.get_children():
+			$Documents.remove_child(child)
+	elif flee:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)
 	else:

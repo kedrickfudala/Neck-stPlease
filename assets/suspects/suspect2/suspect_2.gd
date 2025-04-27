@@ -1,0 +1,2 @@
+extends SuspectTemplate
+class_name Suspect2
