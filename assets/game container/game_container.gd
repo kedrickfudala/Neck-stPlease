@@ -8,6 +8,8 @@ class_name GameContainer
 
 func _ready():
 	spawn_main_menu()
+	$AudioStreamPlayer2D.play()
+	
 	
 func spawn_main_menu():
 	var main_menu_inst = main_menu_scene.instantiate()
