@@ -14,6 +14,7 @@ texture = ExtResource("2_nw43l")
 
 [node name="Label" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 87.0
 offset_top = 72.0
 offset_right = 815.0
@@ -22,6 +23,7 @@ theme_override_font_sizes/font_size = 120
 text = "Neck-st Please"
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 298.0
 offset_top = 439.0
 offset_right = 602.0

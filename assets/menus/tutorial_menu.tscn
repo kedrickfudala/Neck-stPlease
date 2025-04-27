@@ -8,11 +8,13 @@ anchors_preset = 0
 script = ExtResource("1_losbj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 903.0
 offset_bottom = 603.0
 color = Color(0.0646965, 0.0646965, 0.0646965, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 79.0
 offset_right = 799.0
@@ -30,6 +32,7 @@ You can use the tools on your deck to help you make a determination, and you may
 Good luck."
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 340.0
 offset_top = 490.0
 offset_right = 568.0

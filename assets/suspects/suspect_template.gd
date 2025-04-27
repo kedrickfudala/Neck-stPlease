@@ -20,7 +20,7 @@ func _ready():
 	$Label.text = str("")
 	#spawn_documents()
 	var move_tween = create_tween()
-	move_tween.tween_property(self, "global_position", Vector2(130, global_position.y), 1.5)
+	move_tween.tween_property(self, "global_position", Vector2(140, global_position.y), 1.5)
 	await move_tween.finished
 	var fade_tween = create_tween()
 	fade_tween.tween_property($Sprite2D, "modulate", Color(1,1,1), 0.8)
@@ -45,12 +45,12 @@ func ask_birth():
 	$Label.text = birth_response
 	$Timer.start()
 
-func allow_reponse():
+func allow():
 	$Label.text = allow_response
 	allowed = true
 	$Timer.start()
 
-func staked_reponse():
+func stake():
 	$Label.text = staked_response
 	staked = true
 	$Timer.start()
@@ -67,7 +67,7 @@ func _on_timer_timeout() -> void:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)
 		var move_tween = create_tween()
-		move_tween.tween_property(self, "global_position", Vector2(600, 120), 1.5)
+		move_tween.tween_property(self, "global_position", Vector2(600, global_position.y), 1.5)
 		await move_tween.finished
 		get_parent().next_suspect()
 		self.queue_free()
