@@ -8,31 +8,27 @@
 
 [node name="Suspect5" instance=ExtResource("1_kjjuf")]
 script = ExtResource("2_deqdx")
-entrance_text = "Hey yhea its me robert
- pattinson I played vampire
- Edward Cullen in the twilight
- movies no autographs rn
- sorry xxx but yeah im a
- human I’m just an actor so
- Im not really a vampire
+entrance_text = "Hey its me Robert Pattinson
+I played vampire Edward Cullen in the Twilight movies! I'm a just a human actor so I'm not really a
+vampire
 "
-garlic_response = "Mamma mia! Just kidding i
- love garlic because
- remember I was only the
- actor for Edward Cullen Im
- not actually Edward so you
- can let me in now"
+garlic_response = "Mamma mia! Just kidding I
+LOVE garlic because
+remember I was only the
+actor for Edward Cullen I'm
+not actually Edward so you
+can let me in now"
 cross_response = "Hey knock it off I just said I’m
- not a vapire!!!!"
+not a vampire!!!!"
 allow_response = "Haha got you! I actually am
- edward cullen xx. But luckily
- for you Im a vegetarian
- vampire so dont worry Im
- not gonna eat anybody! I just
- wanted to crash here for a
- little. Too da loo!"
+Edward Cullen! But luckily
+for you I'm a vegetarian
+ vampire so I'm not gonna
+eat anybody! I just wanted
+to crash here for a little.
+Too da loo!"
 staked_response = "Ahhhh! 
-Why did you do that!!!"
+Why did you do that!?!?"
 entrance_expr = ExtResource("3_3sqtn")
 idle_expr = ExtResource("3_3sqtn")
 garlic_expr = ExtResource("3_3sqtn")

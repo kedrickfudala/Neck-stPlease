@@ -8,10 +8,10 @@ func _physics_process(delta: float) -> void:
 	$Label.text = str("garlic")
 	$Label.text += str("\nUses: ") + str(uses)
 	$Label.visible = hovered
-	#if uses > 0:
-		#modulate = Color(1,1,1)
-	#else:
-		#modulate = Color(1,0,0)
+	if uses > 1:
+		$Sprite2D2.visible = true
+	else:
+		$Sprite2D2.visible = false
 
 func _on_pressed() -> void:
 	get_parent().garlic_pressed()

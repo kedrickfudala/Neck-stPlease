@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diro5h30wwmsk"
-path="res://.godot/imported/greenButtonDown.png-c26011f075fb8e7bf2f740011c86a717.ctex"
+uid="uid://qokeysyan8ta"
+path="res://.godot/imported/right(desk).jpg-28f1f194d957a3d489d6cd2fae878a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tools/green button/greenButtonDown.png"
-dest_files=["res://.godot/imported/greenButtonDown.png-c26011f075fb8e7bf2f740011c86a717.ctex"]
+source_file="res://assets/interior/right(desk).jpg"
+dest_files=["res://.godot/imported/right(desk).jpg-28f1f194d957a3d489d6cd2fae878a48.ctex"]
 
 [params]
 

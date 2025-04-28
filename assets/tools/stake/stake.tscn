@@ -6,19 +6,24 @@
 
 [node name="Stake" type="TextureButton"]
 z_index = 10
-offset_left = -75.0
-offset_top = -81.0
-offset_right = 181.0
-offset_bottom = 175.0
-texture_normal = ExtResource("1_b6ouk")
+offset_left = -120.0
+offset_top = -28.0
+offset_right = 112.0
+offset_bottom = 24.0
 script = ExtResource("2_qx8uv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(118, 29)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_b6ouk")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 53.0
-offset_top = 60.0
-offset_right = 144.0
-offset_bottom = 103.0
+offset_left = 97.0
+offset_top = -39.0
+offset_right = 188.0
+offset_bottom = 4.0
 text = "stake"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

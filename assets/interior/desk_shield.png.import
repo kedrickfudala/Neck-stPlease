@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x5ymuubb70s"
-path="res://.godot/imported/magGlass.png-eb8101f1ce8ecbe2a9142f1105b9264d.ctex"
+uid="uid://ba2mej285g13e"
+path="res://.godot/imported/desk_shield.png-19b0630d025e4bb7e0566d1aba2ddfab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tools/mag glass/magGlass.png"
-dest_files=["res://.godot/imported/magGlass.png-eb8101f1ce8ecbe2a9142f1105b9264d.ctex"]
+source_file="res://assets/interior/desk_shield.png"
+dest_files=["res://.godot/imported/desk_shield.png-19b0630d025e4bb7e0566d1aba2ddfab.ctex"]
 
 [params]
 
