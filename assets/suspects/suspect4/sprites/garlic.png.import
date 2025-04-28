@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0520j7eemay5"
-path="res://.godot/imported/human - easy (2).png-c68a7a3818673ff7d13431f5b8a5b990.ctex"
+uid="uid://n1t5nnfjumr6"
+path="res://.godot/imported/garlic.png-37d8331d40b2dba75457b74d6c25a0e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/suspects/suspect4/sprites/human - easy (2).png"
-dest_files=["res://.godot/imported/human - easy (2).png-c68a7a3818673ff7d13431f5b8a5b990.ctex"]
+source_file="res://assets/suspects/suspect4/sprites/garlic.png"
+dest_files=["res://.godot/imported/garlic.png-37d8331d40b2dba75457b74d6c25a0e2.ctex"]
 
 [params]
 
