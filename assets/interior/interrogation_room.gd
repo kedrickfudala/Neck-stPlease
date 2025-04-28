@@ -12,7 +12,7 @@ class_name InterrogationRoom
 @onready var suspect4 = preload("res://assets/suspects/suspect4/suspect_4.tscn")
 @onready var suspect5 = preload("res://assets/suspects/suspect5/suspect_5.tscn")
 
-@onready var suspects = [suspect4, suspect1, suspect2, suspect5]
+@onready var suspects = [suspect1, suspect2, suspect4, suspect5]
 
 func _ready() -> void:
 	next_suspect()
