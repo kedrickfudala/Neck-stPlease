@@ -9,10 +9,10 @@ class_name InterrogationRoom
 @onready var suspect1 = preload("res://assets/suspects/suspect1/suspect_1.tscn")
 @onready var suspect2 = preload("res://assets/suspects/suspect2/suspect_2.tscn")
 @onready var suspect3
-@onready var suspect4
+@onready var suspect4 = preload("res://assets/suspects/suspect4/suspect_4.tscn")
 @onready var suspect5 = preload("res://assets/suspects/suspect5/suspect_5.tscn")
 
-@onready var suspects = [suspect1, suspect2, suspect5]
+@onready var suspects = [suspect4, suspect1, suspect2, suspect5]
 
 func _ready() -> void:
 	next_suspect()

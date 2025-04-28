@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqn72ddraxp03"]
+[gd_scene load_steps=5 format=3 uid="uid://ch264uojomn2w"]
 
 [ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_6gosd"]
 [ext_resource type="Texture2D" uid="uid://ckubkktpunmpa" path="res://assets/suspects/suspect2/sprites/vladID.png" id="2_lpj6h"]
@@ -15,7 +15,6 @@ texture = ExtResource("2_lpj6h")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-6.24999, 26.25)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0dwvs")
 
 [node name="NameButton" type="TextureButton" parent="." index="2"]
@@ -26,6 +25,7 @@ offset_bottom = 30.0
 
 [node name="ColorRect" type="ColorRect" parent="NameButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
 offset_right = 182.0
 offset_bottom = 37.0
 mouse_filter = 2
@@ -38,6 +38,7 @@ offset_bottom = 75.0
 
 [node name="ColorRect" type="ColorRect" parent="BirthButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
 offset_right = 184.0
 offset_bottom = 37.0
 mouse_filter = 2
