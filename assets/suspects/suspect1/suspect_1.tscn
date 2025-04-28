@@ -1,13 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://4fu7uski5qm1"]
+[gd_scene load_steps=9 format=3 uid="uid://4fu7uski5qm1"]
 
 [ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_qt570"]
+[ext_resource type="Script" path="res://assets/suspects/suspect1/suspect_1.gd" id="2_qljjb"]
 [ext_resource type="PackedScene" uid="uid://dewf3afuq2b86" path="res://assets/suspects/suspect1/bob_jones_dl.tscn" id="2_xxsgj"]
 [ext_resource type="Texture2D" uid="uid://cruqyism8o4ha" path="res://assets/suspects/suspect1/sprites/idle1.png" id="3_bd1n6"]
 [ext_resource type="Texture2D" uid="uid://tw2klu4r0la6" path="res://assets/suspects/suspect1/sprites/garlic1.png" id="4_qu5pm"]
 [ext_resource type="Texture2D" uid="uid://ctkyet1guyf41" path="res://assets/suspects/suspect1/sprites/accept5.png" id="5_2nyxq"]
 [ext_resource type="Texture2D" uid="uid://b8xg7ufft6uxg" path="res://assets/suspects/suspect1/sprites/speak1.png" id="6_7yaj2"]
+[ext_resource type="Texture2D" uid="uid://cpythp3qgobye" path="res://assets/suspects/suspect1/sprites/death2.png" id="8_l11mp"]
 
 [node name="Suspect1" instance=ExtResource("1_qt570")]
+script = ExtResource("2_qljjb")
 entrance_text = "Hey, could you let me in?
 Here's my ID"
 garlic_response = "Why are you offering me garlic?"
@@ -16,6 +19,8 @@ allow_response = "Thanks, I knew I could rely on you"
 staked_response = "Why... what did I do...?"
 name_response = "Yep, thats my name"
 birth_response = "Born and raised here in Kedricksville"
+teeth_response = "My teeth?
+I ain't got any fangs, see?"
 documents = Array[PackedScene]([ExtResource("2_xxsgj")])
 entrance_expr = ExtResource("6_7yaj2")
 idle_expr = ExtResource("3_bd1n6")
@@ -24,15 +29,35 @@ cross_expr = ExtResource("5_2nyxq")
 name_expr = ExtResource("6_7yaj2")
 birth_expr = ExtResource("5_2nyxq")
 allow_expr = ExtResource("5_2nyxq")
+staked_expr = ExtResource("8_l11mp")
+teeth_expr = ExtResource("6_7yaj2")
+stain_expr = ExtResource("6_7yaj2")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_bd1n6")
 
 [node name="Label" parent="." index="1"]
-offset_left = 108.0
-offset_top = -250.0
-offset_right = 370.0
-offset_bottom = -194.0
+offset_left = 127.0
+offset_top = -111.0
+offset_right = 389.0
+offset_bottom = -55.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.5
+
+[node name="TextureButton" type="TextureButton" parent="." index="4"]
+offset_left = -40.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = 30.0
+
+[node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 43.0
+offset_bottom = 36.0
+mouse_filter = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

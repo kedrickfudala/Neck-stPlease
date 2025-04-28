@@ -6,7 +6,13 @@ class_name InterrogationRoom
 
 @onready var mag_glass : bool = false
 
-@onready var suspects = [preload("res://assets/suspects/suspect1/suspect_1.tscn"), preload("res://assets/suspects/suspect2/suspect_2.tscn")]
+@onready var suspect1 = preload("res://assets/suspects/suspect1/suspect_1.tscn")
+@onready var suspect2 = preload("res://assets/suspects/suspect2/suspect_2.tscn")
+@onready var suspect3
+@onready var suspect4
+@onready var suspect5 = preload("res://assets/suspects/suspect5/suspect_5.tscn")
+
+@onready var suspects = [suspect1, suspect2, suspect5]
 
 func _ready() -> void:
 	next_suspect()
@@ -31,16 +37,13 @@ func cross_pressed():
 		current_suspect.ask_cross()
 
 func green_button_pressed():
-	if current_suspect and !current_suspect.is_vampire:
+	if current_suspect:
 		current_suspect.allow()
-	else:
-		game_over()
 
 func stake_pressed():
-	if current_suspect and current_suspect.is_vampire:
+	if current_suspect:
 		current_suspect.stake()
-	else:
-		game_over()
 
 func game_over():
 	get_parent().spawn_game_over_menu()
+	self.queue_free()

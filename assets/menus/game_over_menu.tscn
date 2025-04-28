@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://blcla3hv63mrv"]
+[gd_scene load_steps=2 format=3 uid="uid://blcla3hv63mrv"]
+
+[ext_resource type="Script" path="res://assets/menus/game_over_menu.gd" id="1_aea4p"]
 
 [node name="GameOverMenu" type="CanvasLayer"]
 process_mode = 2
+script = ExtResource("1_aea4p")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -30.0
@@ -18,3 +21,13 @@ offset_bottom = 412.0
 theme_override_font_sizes/font_size = 51
 text = "you guessed wrong!
 game over!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 354.0
+offset_top = 374.0
+offset_right = 562.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 81
+text = "Retry"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
