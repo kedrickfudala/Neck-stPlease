@@ -113,6 +113,11 @@ func _on_timer_timeout() -> void:
 		else:
 			for child in $Documents.get_children():
 				$Documents.remove_child(child)
+			var vanish_tween = create_tween()
+			vanish_tween.tween_property($Sprite2D, "modulate", Color(1,0,0,0), 1.5)
+			await vanish_tween.finished
+			get_parent().next_suspect()
+			self.queue_free()
 	elif flee:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)

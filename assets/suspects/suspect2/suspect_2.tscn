@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://3621qxrdgwct"]
+[gd_scene load_steps=10 format=3 uid="uid://3621qxrdgwct"]
 
 [ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_fc6bn"]
 [ext_resource type="Texture2D" uid="uid://jwa4fwh0v2it" path="res://assets/suspects/suspect2/sprites/irritated.png" id="2_cstru"]
 [ext_resource type="Script" path="res://assets/suspects/suspect2/suspect_2.gd" id="2_k2yg5"]
 [ext_resource type="Texture2D" uid="uid://duo4bcnr36eqe" path="res://assets/suspects/suspect2/sprites/speak.png" id="2_tjnsi"]
+[ext_resource type="PackedScene" uid="uid://cqn72ddraxp03" path="res://assets/suspects/suspect2/vlad_id.tscn" id="3_1s48j"]
 [ext_resource type="Texture2D" uid="uid://8x7dl3632fcu" path="res://assets/suspects/suspect2/sprites/live.png" id="3_3l12g"]
 [ext_resource type="Texture2D" uid="uid://dera1ack5k1mj" path="res://assets/suspects/suspect2/sprites/angry.png" id="4_yrwhq"]
 [ext_resource type="Texture2D" uid="uid://by0ml6x1ygibj" path="res://assets/suspects/suspect2/sprites/nervous.png" id="5_q6x4v"]
@@ -19,10 +20,11 @@ garlic_response = "Oh such a disgusting thing.
 Keep it away from me!"
 allow_response = "My darkest thanks."
 staked_response = "Gah... how did you know...?"
-name_response = "That's Count Vlad Țepeș to you.
+name_response = "That's COUNT Vlad Țepeș to you.
 "
 birth_response = "Ah, that’s a…typo.
 I was born in 1967, not 1867."
+documents = Array[PackedScene]([ExtResource("3_1s48j")])
 entrance_expr = ExtResource("2_tjnsi")
 idle_expr = ExtResource("2_cstru")
 garlic_expr = ExtResource("4_yrwhq")
