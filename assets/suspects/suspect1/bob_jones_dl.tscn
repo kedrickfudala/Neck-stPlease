@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://assets/suspects/suspect1/bob_jones_dl.gd" id="2_qrg8x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owdep"]
-size = Vector2(282, 217)
+size = Vector2(270, 192.5)
 
 [node name="BobJonesDL" instance=ExtResource("1_fpb2o")]
 script = ExtResource("2_qrg8x")
@@ -14,14 +14,15 @@ script = ExtResource("2_qrg8x")
 texture = ExtResource("2_hjhea")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(4, -14.5)
+position = Vector2(5.00001, -13.75)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_owdep")
 
 [node name="NameButton" type="TextureButton" parent="." index="2"]
-offset_left = -33.0
-offset_top = -68.0
-offset_right = 132.0
-offset_bottom = -32.0
+offset_left = -32.5
+offset_top = -62.5
+offset_right = 132.5
+offset_bottom = -26.5
 
 [node name="ColorRect" type="ColorRect" parent="NameButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)
@@ -30,13 +31,13 @@ offset_right = 165.0
 offset_bottom = 35.0
 mouse_filter = 2
 
-[node name="TextureButton" type="TextureButton" parent="." index="3"]
-offset_left = -31.0
-offset_top = -12.0
-offset_right = 137.0
-offset_bottom = 19.0
+[node name="BirthButton" type="TextureButton" parent="." index="3"]
+offset_left = -32.5
+offset_top = 27.5
+offset_right = 135.5
+offset_bottom = 58.5
 
-[node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
+[node name="ColorRect" type="ColorRect" parent="BirthButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)
 layout_mode = 0
 offset_right = 164.0
@@ -44,4 +45,4 @@ offset_bottom = 32.0
 mouse_filter = 2
 
 [connection signal="pressed" from="NameButton" to="." method="_on_name_button_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="BirthButton" to="." method="_on_birth_button_pressed"]

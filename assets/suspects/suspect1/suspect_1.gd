@@ -11,4 +11,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_texture_button_pressed() -> void:
 	if get_parent().mag_glass:
+		ask_teeth()
 		get_parent().mag_glass = false

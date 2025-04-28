@@ -1,5 +1,5 @@
 extends SuspectTemplate
-class_name Suspect2
+class_name Suspect4
 
 func _physics_process(delta: float) -> void:
 	if get_parent().mag_glass:

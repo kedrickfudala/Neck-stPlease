@@ -84,6 +84,8 @@ func allow():
 func stake():
 	$Label.text = staked_response
 	$Sprite2D.texture = staked_expr
+	var red_tween = create_tween()
+	red_tween.tween_property($Sprite2D, "modulate", Color(1,0,0), $Timer.wait_time)
 	staked = true
 	$Timer.start()
 
@@ -98,14 +100,26 @@ func _on_timer_timeout() -> void:
 	if allowed:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)
+		var fade_tween = create_tween()
+		fade_tween.tween_property($Sprite2D, "modulate", Color(0,0,0), 0.6)
 		var move_tween = create_tween()
 		move_tween.tween_property(self, "global_position", Vector2(600, global_position.y), 1.5)
 		await move_tween.finished
 		get_parent().next_suspect()
 		self.queue_free()
+		if is_vampire:
+			get_parent().game_over()
 	elif staked:
-		for child in $Documents.get_children():
-			$Documents.remove_child(child)
+		if !is_vampire:
+			get_parent().game_over()
+		else:
+			for child in $Documents.get_children():
+				$Documents.remove_child(child)
+			var vanish_tween = create_tween()
+			vanish_tween.tween_property($Sprite2D, "modulate", Color(1,0,0,0), 1.5)
+			await vanish_tween.finished
+			get_parent().next_suspect()
+			self.queue_free()
 	elif flee:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)

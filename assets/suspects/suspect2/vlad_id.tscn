@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch264uojomn2w"]
+
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_6gosd"]
+[ext_resource type="Texture2D" uid="uid://ckubkktpunmpa" path="res://assets/suspects/suspect2/sprites/vladID.png" id="2_lpj6h"]
+[ext_resource type="Script" path="res://assets/suspects/suspect2/vlad_id.gd" id="2_sq7qg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dwvs"]
+size = Vector2(302.5, 182.5)
+
+[node name="VladID" instance=ExtResource("1_6gosd")]
+script = ExtResource("2_sq7qg")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_lpj6h")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-6.24999, 26.25)
+shape = SubResource("RectangleShape2D_0dwvs")
+
+[node name="NameButton" type="TextureButton" parent="." index="2"]
+offset_left = -50.0
+offset_top = -7.0
+offset_right = 135.0
+offset_bottom = 30.0
+
+[node name="ColorRect" type="ColorRect" parent="NameButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+[node name="BirthButton" type="TextureButton" parent="." index="3"]
+offset_left = -47.0
+offset_top = 35.0
+offset_right = 138.0
+offset_bottom = 75.0
+
+[node name="ColorRect" type="ColorRect" parent="BirthButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+[connection signal="pressed" from="NameButton" to="." method="_on_name_button_pressed"]
+[connection signal="pressed" from="BirthButton" to="." method="_on_birth_button_pressed"]
