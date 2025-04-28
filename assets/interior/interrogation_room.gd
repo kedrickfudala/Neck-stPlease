@@ -16,6 +16,7 @@ class_name InterrogationRoom
 
 func _ready() -> void:
 	next_suspect()
+	
 
 func next_suspect():
 	if suspect_num < len(suspects):

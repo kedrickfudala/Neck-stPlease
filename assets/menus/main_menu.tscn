@@ -1,7 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5a47kissdm1p"]
+[gd_scene load_steps=15 format=3 uid="uid://b5a47kissdm1p"]
 
 [ext_resource type="Script" path="res://assets/menus/main_menu.gd" id="1_p7ydn"]
-[ext_resource type="Texture2D" uid="uid://c4m3rl6wxrcmq" path="res://assets/menus/mainMeniAI.png" id="2_nw43l"]
+[ext_resource type="Texture2D" uid="uid://c0l3j61kmmx1h" path="res://assets/menus/game_start.png" id="2_hqm17"]
+[ext_resource type="Texture2D" uid="uid://diaxenougddoh" path="res://assets/menus/start.png" id="3_twhfv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0wsq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6gl6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ch4nj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_07fxl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wcj45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7w2n7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_658ni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnmj1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rovka"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_22yiy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3awrf"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,8 +32,8 @@ anchors_preset = 0
 script = ExtResource("1_p7ydn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(450, 300)
-texture = ExtResource("2_nw43l")
+position = Vector2(576, 324)
+texture = ExtResource("2_hqm17")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -24,11 +47,22 @@ text = "Neck-st Please"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 298.0
-offset_top = 439.0
-offset_right = 602.0
-offset_bottom = 545.0
-theme_override_font_sizes/font_size = 86
-text = "Play"
+offset_left = 1010.0
+offset_top = 495.0
+offset_right = 1184.0
+offset_bottom = 667.0
+scale = Vector2(0.7, 0.7)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w0wsq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_h6gl6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ch4nj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_07fxl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wcj45")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7w2n7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_658ni")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jnmj1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rovka")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_22yiy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3awrf")
+icon = ExtResource("3_twhfv")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
