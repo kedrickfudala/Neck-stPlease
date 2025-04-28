@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5wmpmkmkrwit"]
+[gd_scene load_steps=13 format=3 uid="uid://5wmpmkmkrwit"]
 
 [ext_resource type="Script" path="res://assets/interior/interrogation_room.gd" id="1_ouyoa"]
 [ext_resource type="Shader" path="res://assets/resources/paint_mix.gdshader" id="2_5ob8h"]
@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://e3y1lsymtrw8" path="res://assets/tools/garlic/garlic.tscn" id="3_ogv08"]
 [ext_resource type="PackedScene" uid="uid://d1djvx34lb23g" path="res://assets/tools/green button/green_button.tscn" id="4_3het6"]
 [ext_resource type="PackedScene" uid="uid://weyekqshii8q" path="res://assets/tools/stake/stake.tscn" id="4_45fqt"]
+[ext_resource type="Texture2D" uid="uid://bsg7exiogvspx" path="res://assets/interior/left.jpg" id="4_tc26d"]
 [ext_resource type="PackedScene" uid="uid://brk1jqax3kafs" path="res://assets/tools/mag glass/mag_glass.tscn" id="5_b62qn"]
+[ext_resource type="Texture2D" uid="uid://ba2mej285g13e" path="res://assets/interior/desk_shield.png" id="5_f55vy"]
+[ext_resource type="Texture2D" uid="uid://qokeysyan8ta" path="res://assets/interior/right(desk).jpg" id="6_donqg"]
 [ext_resource type="PackedScene" uid="uid://c23dphnh15yff" path="res://assets/tools/cross/cross.tscn" id="8_gyg81"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hqglm"]
@@ -42,15 +45,6 @@ layout_mode = 0
 offset_right = 300.0
 offset_bottom = 389.0
 mouse_filter = 2
-
-[node name="ColorRect2" type="ColorRect" parent="Control"]
-z_index = 5
-layout_mode = 0
-offset_left = 298.0
-offset_right = 900.0
-offset_bottom = 600.0
-mouse_filter = 2
-color = Color(0.158756, 0.086135, 0.113207, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Control"]
 z_index = 5
@@ -89,32 +83,50 @@ offset_right = 267.0
 offset_bottom = 624.0
 text = "Drag documents to your table ->"
 
+[node name="Sprite2D2" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(164, 220)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_tc26d")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(160, 318)
+scale = Vector2(0.998705, 0.998705)
+texture = ExtResource("5_f55vy")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Control"]
+z_index = 6
+position = Vector2(624, 300)
+scale = Vector2(0.932099, 0.932099)
+texture = ExtResource("6_donqg")
+
 [node name="Garlic" parent="." instance=ExtResource("3_ogv08")]
-offset_left = 749.0
-offset_top = 165.0
-offset_right = 877.0
-offset_bottom = 293.0
+offset_left = 388.0
+offset_top = -6.0
+offset_right = 512.0
+offset_bottom = 114.0
 
 [node name="GreenButton" parent="." instance=ExtResource("4_3het6")]
-offset_left = 746.0
-offset_top = 461.0
-offset_right = 874.0
-offset_bottom = 589.0
+offset_left = 727.0
+offset_top = 445.0
+offset_right = 915.0
+offset_bottom = 608.0
 
 [node name="Stake" parent="." instance=ExtResource("4_45fqt")]
-offset_left = 480.0
-offset_top = 405.0
-offset_right = 736.0
-offset_bottom = 661.0
+offset_left = 474.0
+offset_top = 521.0
+offset_right = 710.0
+offset_bottom = 575.0
 
 [node name="MagGlass" parent="." instance=ExtResource("5_b62qn")]
-offset_left = 755.0
-offset_top = 34.0
-offset_right = 883.0
-offset_bottom = 162.0
+offset_left = 563.0
+offset_top = 2.0
+offset_right = 679.0
+offset_bottom = 117.0
 
 [node name="cross" parent="." instance=ExtResource("8_gyg81")]
-offset_left = 753.0
-offset_top = 303.0
-offset_right = 881.0
-offset_bottom = 431.0
+offset_left = 745.0
+offset_top = 2.0
+offset_right = 873.0
+offset_bottom = 130.0

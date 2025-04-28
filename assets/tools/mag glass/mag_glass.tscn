@@ -1,21 +1,25 @@
 [gd_scene load_steps=3 format=3 uid="uid://brk1jqax3kafs"]
 
-[ext_resource type="Texture2D" uid="uid://x5ymuubb70s" path="res://assets/tools/mag glass/magGlass.png" id="1_o0ra4"]
 [ext_resource type="Script" path="res://assets/tools/mag glass/mag_glass.gd" id="2_cw5yx"]
+[ext_resource type="Texture2D" uid="uid://4lshlaqtl4ye" path="res://assets/tools/mag glass/glass.png" id="2_mr4lt"]
 
 [node name="MagGlass" type="TextureButton"]
 z_index = 10
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("1_o0ra4")
+offset_right = 123.0
+offset_bottom = 120.0
 script = ExtResource("2_cw5yx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(61, 58)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("2_mr4lt")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = -93.0
-offset_top = 23.0
-offset_right = 3.0
-offset_bottom = 51.0
+offset_left = 21.0
+offset_top = 136.0
+offset_right = 117.0
+offset_bottom = 164.0
 text = "mag glass"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
