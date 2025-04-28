@@ -34,31 +34,30 @@ teeth_expr = ExtResource("6_7yaj2")
 stain_expr = ExtResource("6_7yaj2")
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(80, 0)
 texture = ExtResource("3_bd1n6")
 
 [node name="Label" parent="." index="1"]
-offset_left = 207.0
-offset_top = -111.0
-offset_right = 469.0
-offset_bottom = -55.0
+offset_left = 129.0
+offset_top = -99.0
+offset_right = 391.0
+offset_bottom = -43.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.5
 
 [node name="TextureButton" type="TextureButton" parent="." index="4"]
-offset_left = -40.0
+offset_left = -44.0
 offset_top = -3.0
-offset_right = 5.0
+offset_right = -4.0
 offset_bottom = 30.0
 
 [node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)
 layout_mode = 0
-offset_left = 81.0
-offset_top = 1.0
-offset_right = 123.0
-offset_bottom = 36.0
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 39.0
+offset_bottom = 33.0
 mouse_filter = 2
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

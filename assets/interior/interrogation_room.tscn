@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://5wmpmkmkrwit"]
+[gd_scene load_steps=13 format=3 uid="uid://5wmpmkmkrwit"]
 
 [ext_resource type="Script" path="res://assets/interior/interrogation_room.gd" id="1_ouyoa"]
 [ext_resource type="Shader" path="res://assets/resources/paint_mix.gdshader" id="2_5ob8h"]
 [ext_resource type="Texture2D" uid="uid://dteeyq81p1x2m" path="res://assets/interior/IMG_0469.jpg" id="2_die1u"]
-[ext_resource type="Texture2D" uid="uid://c0aj2ccr0ns2j" path="res://assets/interior/8d2236e7-476c-4467-b137-bfc36a564ebc.jpg" id="2_wgbdg"]
 [ext_resource type="PackedScene" uid="uid://e3y1lsymtrw8" path="res://assets/tools/garlic/garlic.tscn" id="3_ogv08"]
 [ext_resource type="PackedScene" uid="uid://d1djvx34lb23g" path="res://assets/tools/green button/green_button.tscn" id="4_3het6"]
 [ext_resource type="PackedScene" uid="uid://weyekqshii8q" path="res://assets/tools/stake/stake.tscn" id="4_45fqt"]
@@ -40,21 +39,24 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 texture = ExtResource("2_die1u")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
+z_index = 1
 layout_mode = 0
-offset_left = 484.0
-offset_right = 1156.0
+offset_left = 299.0
+offset_right = 971.0
 offset_bottom = 648.0
+mouse_filter = 2
 texture = ExtResource("6_donqg")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-visible = false
 z_as_relative = false
 material = SubResource("ShaderMaterial_hqglm")
 layout_mode = 0
@@ -63,26 +65,16 @@ offset_bottom = 389.0
 mouse_filter = 2
 
 [node name="ColorRect3" type="ColorRect" parent="Control"]
-visible = false
 z_index = 5
 layout_mode = 0
-offset_top = 389.0
-offset_right = 900.0
-offset_bottom = 600.0
+offset_left = -53.0
+offset_top = 383.0
+offset_right = 306.0
+offset_bottom = 625.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
-visible = false
-modulate = Color(0.572988, 0.572988, 0.572988, 1)
-z_index = 6
-z_as_relative = false
-position = Vector2(844, 570)
-scale = Vector2(0.58125, 0.618359)
-texture = ExtResource("2_wgbdg")
-
 [node name="ColorRect4" type="ColorRect" parent="Control"]
-visible = false
 z_index = 6
 layout_mode = 0
 offset_left = 298.0
@@ -96,10 +88,10 @@ modulate = Color(0.226707, 0.226707, 0.226707, 1)
 z_index = 7
 z_as_relative = false
 layout_mode = 0
-offset_left = 245.0
-offset_top = 616.0
-offset_right = 474.0
-offset_bottom = 669.0
+offset_left = 48.0
+offset_top = 563.0
+offset_right = 277.0
+offset_bottom = 616.0
 text = "Drag documents to your table ->"
 
 [node name="Sprite2D2" type="Sprite2D" parent="Control"]
@@ -114,46 +106,32 @@ position = Vector2(160, 318)
 scale = Vector2(0.998705, 0.998705)
 texture = ExtResource("5_f55vy")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Control"]
-visible = false
-z_index = 6
-position = Vector2(936, 495)
-scale = Vector2(0.932099, 0.932099)
-texture = ExtResource("6_donqg")
-
 [node name="Garlic" parent="." instance=ExtResource("3_ogv08")]
-offset_left = 754.0
-offset_top = 44.0
-offset_right = 878.0
-offset_bottom = 164.0
-scale = Vector2(1.4, 1.4)
+offset_left = 753.0
+offset_top = 6.0
+offset_right = 877.0
+offset_bottom = 126.0
 
 [node name="GreenButton" parent="." instance=ExtResource("4_3het6")]
-offset_left = 954.0
-offset_top = 66.0
-offset_right = 1142.0
-offset_bottom = 229.0
+offset_left = 720.0
+offset_top = 448.0
+offset_right = 908.0
+offset_bottom = 611.0
 
 [node name="Stake" parent="." instance=ExtResource("4_45fqt")]
-offset_left = 568.0
-offset_top = 545.0
-offset_right = 807.0
-offset_bottom = 603.0
-rotation = 4.6164
-scale = Vector2(1.4, 1.4)
+offset_left = 482.0
+offset_top = 533.0
+offset_right = 721.0
+offset_bottom = 591.0
 
 [node name="MagGlass" parent="." instance=ExtResource("5_b62qn")]
-offset_left = 877.0
-offset_top = 403.0
-offset_right = 1001.0
-offset_bottom = 521.0
-rotation = -0.190241
-scale = Vector2(1.65, 1.65)
+offset_left = 495.0
+offset_top = 20.0
+offset_right = 619.0
+offset_bottom = 138.0
 
 [node name="cross" parent="." instance=ExtResource("8_gyg81")]
-offset_left = 980.0
-offset_top = 227.0
-offset_right = 1091.0
-offset_bottom = 346.0
-rotation = -0.0471239
-scale = Vector2(1.4, 1.4)
+offset_left = 633.0
+offset_top = 13.0
+offset_right = 744.0
+offset_bottom = 132.0
