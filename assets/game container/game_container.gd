@@ -10,6 +10,7 @@ func _ready():
 	init()
 
 func init():
+	$ColorRect.size = Vector2(1152, 648)
 	$ColorRect.modulate = Color(1,1,1,1)
 	spawn_main_menu()
 	var blackout_tween = create_tween()

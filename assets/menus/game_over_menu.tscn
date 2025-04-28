@@ -28,6 +28,7 @@
 
 [node name="GameOverMenu" type="CanvasLayer"]
 process_mode = 2
+visible = false
 script = ExtResource("1_aea4p")
 
 [node name="TextureRect" type="TextureRect" parent="."]

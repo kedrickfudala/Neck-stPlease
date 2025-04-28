@@ -29,6 +29,7 @@ shader_parameter/spin_amount = 0.125
 shader_parameter/pixel_filter = 700.0
 
 [node name="InterrogationRoom" type="Node2D"]
+visible = false
 script = ExtResource("1_ouyoa")
 
 [node name="Control" type="Control" parent="."]

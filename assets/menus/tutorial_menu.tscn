@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://assets/menus/tutorial_menu.gd" id="1_losbj"]
 
 [node name="TutorialMenu" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_losbj")
