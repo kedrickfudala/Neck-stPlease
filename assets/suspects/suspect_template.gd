@@ -100,6 +100,8 @@ func _on_timer_timeout() -> void:
 	if allowed:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)
+		var fade_tween = create_tween()
+		fade_tween.tween_property($Sprite2D, "modulate", Color(0,0,0), 0.6)
 		var move_tween = create_tween()
 		move_tween.tween_property(self, "global_position", Vector2(600, global_position.y), 1.5)
 		await move_tween.finished

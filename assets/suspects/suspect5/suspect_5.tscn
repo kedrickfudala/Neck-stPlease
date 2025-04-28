@@ -31,6 +31,8 @@ allow_response = "Haha got you! I actually am
  not gonna eat anybody! I just
  wanted to crash here for a
  little. Too da loo!"
+staked_response = "Ahhhh! 
+Why did you do that!!!"
 entrance_expr = ExtResource("3_3sqtn")
 idle_expr = ExtResource("3_3sqtn")
 garlic_expr = ExtResource("3_3sqtn")
