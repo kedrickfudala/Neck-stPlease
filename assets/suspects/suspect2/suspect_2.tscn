@@ -18,7 +18,8 @@ Would you be so kind as to
 let me in at this hour?"
 garlic_response = "Oh such a disgusting thing.
 Keep it away from me!"
-cross_response = "AH!"
+cross_response = "Hsss, you…humans…and your
+false deities. Disgusting."
 allow_response = "My darkest thanks."
 staked_response = "Gah... how did you know...?"
 name_response = "That's COUNT Vlad Țepeș to you.
@@ -37,7 +38,6 @@ birth_expr = ExtResource("5_q6x4v")
 allow_expr = ExtResource("3_3l12g")
 staked_expr = ExtResource("8_vn6pn")
 teeth_expr = ExtResource("5_q6x4v")
-stain_expr = ExtResource("2_tjnsi")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_cstru")
