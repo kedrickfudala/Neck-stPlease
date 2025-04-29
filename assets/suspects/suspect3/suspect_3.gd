@@ -1,10 +1,5 @@
 extends SuspectTemplate
-class_name Suspect5
-
-func stake():
-	is_vampire = true
-	get_parent().get_parent().robert_alive = false
-	super.stake()
+class_name Suspect3
 
 func _physics_process(_delta: float) -> void:
 	if get_parent().mag_glass:

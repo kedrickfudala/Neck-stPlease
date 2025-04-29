@@ -9,9 +9,7 @@ class_name SuspectTemplate
 @export_multiline var staked_response : String
 @export_multiline var name_response : String
 @export_multiline var birth_response : String
-
 @export_multiline var teeth_response : String
-@export_multiline var stain_response : String
 
 @export var documents : Array[PackedScene] = []
 
@@ -23,9 +21,7 @@ class_name SuspectTemplate
 @export var birth_expr : Texture
 @export var allow_expr : Texture
 @export var staked_expr : Texture
-
 @export var teeth_expr : Texture
-@export var stain_expr : Texture
 
 @onready var allowed : bool = false
 @onready var staked : bool = false
@@ -70,11 +66,6 @@ func ask_teeth():
 	$Sprite2D.texture = teeth_expr
 	$Timer.start()
 
-func ask_stain():
-	$Label.text = stain_response
-	$Sprite2D.texture = stain_expr
-	$Timer.start()
-
 func allow():
 	$Label.text = allow_response
 	$Sprite2D.texture = allow_expr
@@ -101,7 +92,7 @@ func _on_timer_timeout() -> void:
 		for child in $Documents.get_children():
 			$Documents.remove_child(child)
 		var fade_tween = create_tween()
-		fade_tween.tween_property($Sprite2D, "modulate", Color(0,0,0), 0.6)
+		fade_tween.tween_property($Sprite2D, "modulate", Color(0,0,0,1), 0.6)
 		var move_tween = create_tween()
 		move_tween.tween_property(self, "global_position", Vector2(600, global_position.y), 1.5)
 		await move_tween.finished

@@ -42,6 +42,12 @@ stain_expr = ExtResource("2_tjnsi")
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_cstru")
 
+[node name="Label" parent="." index="1"]
+offset_left = 112.0
+offset_top = -73.0
+offset_right = 374.0
+offset_bottom = -17.0
+
 [node name="TextureButton" type="TextureButton" parent="." index="4"]
 offset_left = -42.0
 offset_top = -5.0

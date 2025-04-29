@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch264uojomn2w"]
 
-[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_6gosd"]
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/suspects/document_template.tscn" id="1_6gosd"]
 [ext_resource type="Texture2D" uid="uid://ckubkktpunmpa" path="res://assets/suspects/suspect2/sprites/vladID.png" id="2_lpj6h"]
 [ext_resource type="Script" path="res://assets/suspects/suspect2/vlad_id.gd" id="2_sq7qg"]
 

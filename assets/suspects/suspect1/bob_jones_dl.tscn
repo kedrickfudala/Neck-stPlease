@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dewf3afuq2b86"]
 
-[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_fpb2o"]
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/suspects/document_template.tscn" id="1_fpb2o"]
 [ext_resource type="Texture2D" uid="uid://c2tdmx8mj28p" path="res://assets/suspects/suspect1/sprites/bobjonesdl.png" id="2_hjhea"]
 [ext_resource type="Script" path="res://assets/suspects/suspect1/bob_jones_dl.gd" id="2_qrg8x"]
 
@@ -15,7 +15,6 @@ texture = ExtResource("2_hjhea")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(5.00001, -13.75)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_owdep")
 
 [node name="NameButton" type="TextureButton" parent="." index="2"]

@@ -31,7 +31,6 @@ birth_expr = ExtResource("5_2nyxq")
 allow_expr = ExtResource("5_2nyxq")
 staked_expr = ExtResource("8_l11mp")
 teeth_expr = ExtResource("6_7yaj2")
-stain_expr = ExtResource("6_7yaj2")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_bd1n6")
