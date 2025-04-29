@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddsjog2t4xfik"]
+[gd_scene load_steps=3 format=3 uid="uid://ddsjog2t4xfik"]
 
 [ext_resource type="Script" path="res://assets/menus/tutorial_menu.gd" id="1_losbj"]
+[ext_resource type="Texture2D" uid="uid://diaxenougddoh" path="res://assets/menus/start.png" id="2_0firl"]
 
 [node name="TutorialMenu" type="Control"]
 layout_mode = 3
@@ -33,11 +34,12 @@ Good luck."
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 340.0
-offset_top = 490.0
-offset_right = 568.0
-offset_bottom = 563.0
+offset_left = 702.0
+offset_top = 427.0
+offset_right = 899.0
+offset_bottom = 607.0
+scale = Vector2(0.65, 0.65)
 theme_override_font_sizes/font_size = 46
-text = "Begin"
+icon = ExtResource("2_0firl")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
