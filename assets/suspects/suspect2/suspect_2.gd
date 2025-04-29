@@ -1,7 +1,7 @@
 extends SuspectTemplate
 class_name Suspect2
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if get_parent().mag_glass:
 		$TextureButton/ColorRect.visible = true
 		$TextureButton.mouse_filter = 0

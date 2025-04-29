@@ -2,8 +2,8 @@ extends TextureButton
 
 @onready var hovered : bool = false
 
-func _physics_process(delta: float) -> void:
-	$Label.text = str("holy cross")
+func _physics_process(_delta: float) -> void:
+	$Label.text = str("Holy Cross")
 	$Label.text += str("\nUses: 1 ")
 	$Label.visible = hovered
 

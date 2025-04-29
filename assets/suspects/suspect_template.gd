@@ -36,7 +36,7 @@ func _ready():
 	$Label.text = str("")
 	$Sprite2D.texture = entrance_expr
 	var move_tween = create_tween()
-	move_tween.tween_property(self, "global_position", Vector2(140, global_position.y), 1.5)
+	move_tween.tween_property(self, "global_position", Vector2(145, global_position.y), 1.5)
 	await move_tween.finished
 	var fade_tween = create_tween()
 	fade_tween.tween_property($Sprite2D, "modulate", Color(1,1,1), 0.8)

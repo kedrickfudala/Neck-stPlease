@@ -9,7 +9,10 @@
 [node name="Suspect5" instance=ExtResource("1_kjjuf")]
 script = ExtResource("2_deqdx")
 entrance_text = "Hey its me Robert Pattinson
-I played vampire Edward Cullen in the Twilight movies! I'm a just a human actor so I'm not really a
+I played vampire Edward
+Cullen in the Twilight
+movies! I'm a just a human
+actor so I'm not really a
 vampire
 "
 garlic_response = "Mamma mia! Just kidding I
@@ -44,10 +47,10 @@ stain_expr = ExtResource("3_3sqtn")
 texture = ExtResource("3_3sqtn")
 
 [node name="Label" parent="." index="1"]
-offset_left = 140.0
-offset_top = -163.0
-offset_right = 402.0
-offset_bottom = -107.0
+offset_left = 92.0
+offset_top = -94.0
+offset_right = 354.0
+offset_bottom = -38.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 8.0
