@@ -15,7 +15,6 @@ texture = ExtResource("3_71ru3")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(-2.5, 1.25001)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4snfi")
 
 [node name="NameButton" type="TextureButton" parent="." index="2"]
