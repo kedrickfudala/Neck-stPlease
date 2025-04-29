@@ -3,8 +3,8 @@ class_name MagGlassTool
 
 @onready var hovered : bool = false
 
-func _physics_process(delta: float) -> void:
-	$Label.text = str("mag glass\ninvestigate\ndiscrepencies")
+func _physics_process(_delta: float) -> void:
+	$Label.text = str("Investigate\ndiscrepencies")
 	$Label.visible = hovered
 	if get_parent().mag_glass:
 		modulate = Color(0,1,0)

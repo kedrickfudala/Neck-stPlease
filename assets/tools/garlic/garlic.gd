@@ -4,8 +4,8 @@ class_name GarlicTool
 @onready var uses : int = 2
 @onready var hovered : bool = false
 
-func _physics_process(delta: float) -> void:
-	$Label.text = str("garlic")
+func _physics_process(_delta: float) -> void:
+	$Label.text = str("Garlic")
 	$Label.text += str("\nUses: ") + str(uses)
 	$Label.visible = hovered
 	if uses > 1:

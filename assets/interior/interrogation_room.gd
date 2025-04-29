@@ -16,16 +16,18 @@ class_name InterrogationRoom
 
 func _ready() -> void:
 	next_suspect()
-	
 
 func next_suspect():
 	if suspect_num < len(suspects):
 		spawn_suspect(suspect_num)
 		suspect_num += 1
+	else:
+		get_parent().victory_screen_scene()
+		self.queue_free()
 
 func spawn_suspect(index : int):
 	var suspect_inst = suspects[index].instantiate()
-	suspect_inst.global_position = Vector2(-200,275)
+	suspect_inst.global_position = Vector2(-200,225)
 	add_child(suspect_inst)
 	current_suspect = suspect_inst
 

@@ -3,8 +3,8 @@ class_name Stake
 
 @onready var hovered : bool = false
 
-func _physics_process(delta: float) -> void:
-	$Label.text = str("stake person\nin heart")
+func _physics_process(_delta: float) -> void:
+	$Label.text = str("Stake them\nin the heart")
 	$Label.visible = hovered
 
 func _on_pressed() -> void:

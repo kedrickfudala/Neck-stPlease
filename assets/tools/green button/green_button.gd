@@ -3,8 +3,8 @@ class_name GreenButton
 
 @onready var hovered : bool = false
 
-func _physics_process(delta: float) -> void:
-	$Label.text = str("allow passage")
+func _physics_process(_delta: float) -> void:
+	$Label.text = str("Allow passage")
 	$Label.visible = hovered
 
 func _on_pressed() -> void:

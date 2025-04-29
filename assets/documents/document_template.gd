@@ -5,7 +5,7 @@ var selected : bool = false
 
 @onready var suspect = get_parent().get_parent()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var size_tween = create_tween()
 	if global_position.x < 300:
 		size_tween.tween_property(self, "scale", Vector2(0.4, 0.4), 0.3)
@@ -22,6 +22,6 @@ func _physics_process(delta: float) -> void:
 	if global_position.x < 0 or global_position.x > 900 or global_position.y < 0 or global_position.y > 600:
 		global_position = Vector2(450,300)
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		selected = true
