@@ -23,8 +23,7 @@ func init():
 	$ColorRect.queue_free()
 
 func spawn_main_menu():
-	if !$AudioStreamPlayer2D.is_playing:
-		$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2D.play()
 	var main_menu_inst = main_menu_scene.instantiate()
 	main_menu_inst.global_position = Vector2(0,0)
 	add_child(main_menu_inst)
@@ -35,8 +34,7 @@ func spawn_tutorial():
 	add_child(tutorial_inst)
 
 func spawn_room():
-	if !$AudioStreamPlayer2D.is_playing:
-		$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2D.play()
 	var room_inst = room_scene.instantiate()
 	room_inst.global_position = Vector2(0,0)
 	add_child(room_inst)

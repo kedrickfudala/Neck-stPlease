@@ -9,9 +9,7 @@ class_name SuspectTemplate
 @export_multiline var staked_response : String
 @export_multiline var name_response : String
 @export_multiline var birth_response : String
-
 @export_multiline var teeth_response : String
-@export_multiline var stain_response : String
 
 @export var documents : Array[PackedScene] = []
 
@@ -23,9 +21,7 @@ class_name SuspectTemplate
 @export var birth_expr : Texture
 @export var allow_expr : Texture
 @export var staked_expr : Texture
-
 @export var teeth_expr : Texture
-@export var stain_expr : Texture
 
 @onready var allowed : bool = false
 @onready var staked : bool = false
@@ -68,11 +64,6 @@ func ask_birth():
 func ask_teeth():
 	$Label.text = teeth_response
 	$Sprite2D.texture = teeth_expr
-	$Timer.start()
-
-func ask_stain():
-	$Label.text = stain_response
-	$Sprite2D.texture = stain_expr
 	$Timer.start()
 
 func allow():

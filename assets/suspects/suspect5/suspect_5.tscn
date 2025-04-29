@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0ou5vvgkk3a5"]
+[gd_scene load_steps=7 format=3 uid="uid://d0ou5vvgkk3a5"]
 
 [ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_kjjuf"]
 [ext_resource type="Script" path="res://assets/suspects/suspect5/suspect_5.gd" id="2_deqdx"]
 [ext_resource type="Texture2D" uid="uid://e37n2kmqm473" path="res://assets/suspects/suspect5/sprites/everything.png" id="3_3sqtn"]
+[ext_resource type="PackedScene" uid="uid://wv7vio1olbwj" path="res://assets/suspects/suspect5/robert_id.tscn" id="3_eosb7"]
 [ext_resource type="Texture2D" uid="uid://bmfs2d2bqwutp" path="res://assets/suspects/suspect5/sprites/live.png" id="4_77jdc"]
 [ext_resource type="Texture2D" uid="uid://c1471e4shllot" path="res://assets/suspects/suspect5/sprites/die1.png" id="5_ej8x6"]
 
@@ -32,6 +33,12 @@ to crash here for a little.
 Too da loo!"
 staked_response = "Ahhhh! 
 Why did you do that!?!?"
+name_response = "Yep, that's me!"
+birth_response = "Yeah thats what it says on
+famousbirthdays.com so..."
+teeth_response = "Haha, you're so funny.
+My teeth are all normal!"
+documents = Array[PackedScene]([ExtResource("3_eosb7")])
 entrance_expr = ExtResource("3_3sqtn")
 idle_expr = ExtResource("3_3sqtn")
 garlic_expr = ExtResource("3_3sqtn")
@@ -41,7 +48,6 @@ birth_expr = ExtResource("3_3sqtn")
 allow_expr = ExtResource("4_77jdc")
 staked_expr = ExtResource("5_ej8x6")
 teeth_expr = ExtResource("3_3sqtn")
-stain_expr = ExtResource("3_3sqtn")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_3sqtn")
@@ -54,3 +60,20 @@ offset_bottom = -38.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 8.0
+
+[node name="TextureButton" type="TextureButton" parent="." index="4"]
+offset_left = -31.0
+offset_top = -20.0
+offset_right = 9.0
+offset_bottom = 13.0
+
+[node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 39.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,14 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://ok8gtc8dweu4"]
+[gd_scene load_steps=11 format=3 uid="uid://ok8gtc8dweu4"]
 
 [ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_tu7wn"]
 [ext_resource type="Texture2D" uid="uid://bdeiya6ye0s5r" path="res://assets/suspects/suspect3/sprites/speak.png" id="2_74l4q"]
+[ext_resource type="Script" path="res://assets/suspects/suspect3/suspect_3.gd" id="2_rgv6i"]
 [ext_resource type="Texture2D" uid="uid://82forms3qq53" path="res://assets/suspects/suspect3/sprites/idle.png" id="3_5vit1"]
+[ext_resource type="PackedScene" uid="uid://djuf5kucwr72g" path="res://assets/suspects/suspect3/fenu_id.tscn" id="3_76f23"]
+[ext_resource type="Texture2D" uid="uid://yxp2jyjx8tb4" path="res://assets/suspects/suspect3/sprites/sad.png" id="4_oxmsx"]
 [ext_resource type="Texture2D" uid="uid://dpqnsmb2go7n3" path="res://assets/suspects/suspect3/sprites/death.png" id="4_p562p"]
 [ext_resource type="Texture2D" uid="uid://dix55jd5wu36o" path="res://assets/suspects/suspect3/sprites/nervoud.png" id="4_ybj1n"]
 [ext_resource type="Texture2D" uid="uid://bs6b5waqa17y3" path="res://assets/suspects/suspect3/sprites/live.png" id="5_6kira"]
 [ext_resource type="Texture2D" uid="uid://cyiwn4hd5xy7j" path="res://assets/suspects/suspect3/sprites/annoyed.png" id="5_207w2"]
 
 [node name="Suspect3" instance=ExtResource("1_tu7wn")]
+script = ExtResource("2_rgv6i")
 entrance_text = "Let’s make this snappy. My
 time is too precious to be
 wasted."
@@ -25,17 +29,19 @@ uprising, there’ll be less
 people to give me presents…"
 teeth_response = "I got a nice set of pearly
 whites."
+documents = Array[PackedScene]([ExtResource("3_76f23")])
 entrance_expr = ExtResource("2_74l4q")
 idle_expr = ExtResource("3_5vit1")
 garlic_expr = ExtResource("4_ybj1n")
 cross_expr = ExtResource("5_207w2")
 name_expr = ExtResource("5_6kira")
-birth_expr = ExtResource("2_74l4q")
+birth_expr = ExtResource("4_oxmsx")
 allow_expr = ExtResource("5_6kira")
 staked_expr = ExtResource("4_p562p")
 teeth_expr = ExtResource("5_6kira")
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -17)
 texture = ExtResource("3_5vit1")
 
 [node name="Label" parent="." index="1"]
@@ -43,3 +49,20 @@ offset_left = 110.0
 offset_top = -99.0
 offset_right = 372.0
 offset_bottom = -43.0
+
+[node name="TextureButton" type="TextureButton" parent="." index="4"]
+offset_left = -25.0
+offset_top = 31.0
+offset_right = 15.0
+offset_bottom = 64.0
+
+[node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 39.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

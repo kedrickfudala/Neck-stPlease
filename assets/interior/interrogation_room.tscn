@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://5wmpmkmkrwit"]
 
 [ext_resource type="Script" path="res://assets/interior/interrogation_room.gd" id="1_ouyoa"]
+[ext_resource type="Texture2D" uid="uid://bg16818cgio66" path="res://assets/interior/full_left.jpg" id="3_a0gha"]
 [ext_resource type="PackedScene" uid="uid://e3y1lsymtrw8" path="res://assets/tools/garlic/garlic.tscn" id="3_ogv08"]
 [ext_resource type="PackedScene" uid="uid://d1djvx34lb23g" path="res://assets/tools/green button/green_button.tscn" id="4_3het6"]
 [ext_resource type="PackedScene" uid="uid://weyekqshii8q" path="res://assets/tools/stake/stake.tscn" id="4_45fqt"]
-[ext_resource type="Texture2D" uid="uid://bsg7exiogvspx" path="res://assets/interior/left.jpg" id="4_tc26d"]
 [ext_resource type="PackedScene" uid="uid://brk1jqax3kafs" path="res://assets/tools/mag glass/mag_glass.tscn" id="5_b62qn"]
 [ext_resource type="Texture2D" uid="uid://ba2mej285g13e" path="res://assets/interior/desk_shield.png" id="5_f55vy"]
 [ext_resource type="Texture2D" uid="uid://qokeysyan8ta" path="res://assets/interior/right(desk).jpg" id="6_donqg"]
@@ -58,7 +58,7 @@ text = "Drag documents to your table >>>"
 modulate = Color(0.281187, 0.281187, 0.281187, 1)
 position = Vector2(164, 220)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("4_tc26d")
+texture = ExtResource("3_a0gha")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Control"]
 modulate = Color(0.521141, 0.521141, 0.521141, 0.215686)

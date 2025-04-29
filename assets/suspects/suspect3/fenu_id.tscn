@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://djuf5kucwr72g"]
+
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/suspects/document_template.tscn" id="1_nrhtt"]
+[ext_resource type="Script" path="res://assets/suspects/suspect3/fenu_id.gd" id="2_5xgsm"]
+[ext_resource type="Texture2D" uid="uid://dw5gna7nbsdkw" path="res://assets/suspects/suspect3/sprites/fanuID.png" id="2_rnl2r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh6mh"]
+size = Vector2(287.5, 197.5)
+
+[node name="FenuID" instance=ExtResource("1_nrhtt")]
+script = ExtResource("2_5xgsm")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-10, 20)
+texture = ExtResource("2_rnl2r")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(13.75, -6.25)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vh6mh")
+
+[node name="NameButton" type="TextureButton" parent="." index="2"]
+offset_left = -35.0
+offset_top = -30.0
+offset_right = 137.0
+
+[node name="ColorRect" type="ColorRect" parent="NameButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_top = -2.0
+offset_right = 172.0
+offset_bottom = 32.0
+mouse_filter = 2
+
+[node name="BirthButton" type="TextureButton" parent="." index="3"]
+offset_left = -35.0
+offset_top = 42.0
+offset_right = 137.0
+offset_bottom = 70.0
+
+[node name="ColorRect" type="ColorRect" parent="BirthButton" index="0"]
+modulate = Color(0, 1, 0, 0.196078)
+layout_mode = 0
+offset_left = 3.0
+offset_right = 172.0
+offset_bottom = 28.0
+mouse_filter = 2
+
+[connection signal="pressed" from="NameButton" to="." method="_on_name_button_pressed"]
+[connection signal="pressed" from="BirthButton" to="." method="_on_birth_button_pressed"]
