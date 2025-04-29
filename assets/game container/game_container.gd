@@ -22,6 +22,9 @@ func init():
 	await blackout_tween.finished
 	$ColorRect.queue_free()
 
+func play_music():
+	$AudioStreamPlayer2D.play()
+
 func spawn_main_menu():
 	$AudioStreamPlayer2D.play()
 	var main_menu_inst = main_menu_scene.instantiate()
@@ -34,13 +37,11 @@ func spawn_tutorial():
 	add_child(tutorial_inst)
 
 func spawn_room():
-	$AudioStreamPlayer2D.play()
 	var room_inst = room_scene.instantiate()
 	room_inst.global_position = Vector2(0,0)
 	add_child(room_inst)
 
 func spawn_game_over_menu():
-	$AudioStreamPlayer2D.stop()
 	get_tree().paused = true
 	var game_over_menu_inst = game_over_menu_scene.instantiate()
 	add_child(game_over_menu_inst)
