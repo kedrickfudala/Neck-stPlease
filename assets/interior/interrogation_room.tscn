@@ -42,16 +42,6 @@ offset_bottom = 648.0
 mouse_filter = 2
 texture = ExtResource("6_donqg")
 
-[node name="ColorRect4" type="ColorRect" parent="Control"]
-visible = false
-z_index = 6
-layout_mode = 0
-offset_left = 298.0
-offset_right = 310.0
-offset_bottom = 600.0
-mouse_filter = 2
-color = Color(0.045885, 0.0149926, 9.02452e-09, 1)
-
 [node name="Label" type="Label" parent="Control"]
 modulate = Color(0.533037, 0.533037, 0.533037, 1)
 z_index = 7

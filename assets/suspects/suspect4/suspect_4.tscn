@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bpnj5hy1hs5y" path="res://assets/suspects/suspect_template.tscn" id="1_wcbpg"]
 [ext_resource type="Script" path="res://assets/suspects/suspect2/suspect_2.gd" id="2_q0iv1"]
-[ext_resource type="PackedScene" uid="uid://ch264uojomn2w" path="res://assets/suspects/suspect2/vlad_id.tscn" id="3_erbuk"]
+[ext_resource type="PackedScene" uid="uid://cpty1k5y7c2iv" path="res://assets/suspects/suspect4/romanov_id.tscn" id="3_wfllq"]
 [ext_resource type="Texture2D" uid="uid://dbumoba4q4qcb" path="res://assets/suspects/suspect4/sprites/speak.png" id="5_4ig67"]
 [ext_resource type="Texture2D" uid="uid://n1t5nnfjumr6" path="res://assets/suspects/suspect4/sprites/garlic.png" id="6_20fk5"]
 [ext_resource type="Texture2D" uid="uid://cunx8t4huc5g4" path="res://assets/suspects/suspect4/sprites/nervous.png" id="7_e5hm0"]
@@ -14,19 +14,26 @@
 [node name="Suspect 4" instance=ExtResource("1_wcbpg")]
 script = ExtResource("2_q0iv1")
 is_vampire = true
-entrance_text = "Excuse me... do you have room for one more?
-It's scary out here"
-garlic_response = "I don't care very much for
-that. Thank you though."
-cross_response = "AH!"
-allow_response = "Thank you, darling"
-staked_response = "Was it... that obvious?"
-name_response = "Yes I believe it's Romanian..."
-birth_response = "Ah, that’s a…typo.
-I was born in 1967, not 1867."
+entrance_text = "Excuse me... do you have
+room for one more?"
+garlic_response = "Eugh…can you put that away
+please? Garlic makes me
+nauseous."
+cross_response = "...Is there a reason you’re
+holding that up?"
+allow_response = "Thank you very much. Your
+cooperation makes this much
+easier."
+staked_response = "You’re smarter than I gave
+you credit for. But you still
+can’t stop all of us…"
+name_response = "Yes, I believe it's Romanian..."
+birth_response = "Some days I feel like I’m too
+young. Then other days, I feel
+like I’m too old"
 teeth_response = "Oh... um...
 My teeth are normal, right?"
-documents = Array[PackedScene]([ExtResource("3_erbuk")])
+documents = Array[PackedScene]([ExtResource("3_wfllq")])
 entrance_expr = ExtResource("5_4ig67")
 idle_expr = ExtResource("10_npgx1")
 garlic_expr = ExtResource("6_20fk5")
@@ -40,6 +47,12 @@ stain_expr = ExtResource("5_4ig67")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("10_npgx1")
+
+[node name="Label" parent="." index="1"]
+offset_left = 120.0
+offset_top = -65.0
+offset_right = 382.0
+offset_bottom = -9.0
 
 [node name="TextureButton" type="TextureButton" parent="." index="4"]
 offset_left = -35.0

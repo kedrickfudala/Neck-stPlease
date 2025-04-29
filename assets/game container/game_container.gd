@@ -23,6 +23,8 @@ func init():
 	$ColorRect.queue_free()
 
 func spawn_main_menu():
+	if !$AudioStreamPlayer2D.is_playing:
+		$AudioStreamPlayer2D.play()
 	var main_menu_inst = main_menu_scene.instantiate()
 	main_menu_inst.global_position = Vector2(0,0)
 	add_child(main_menu_inst)
@@ -46,6 +48,7 @@ func spawn_game_over_menu():
 	add_child(game_over_menu_inst)
 
 func spawn_victory_screen():
+	$AudioStreamPlayer2D.stop()
 	var victory_screen_inst = victory_screen_scene.instantiate()
 	if !robert_alive:
 		victory_screen_inst.robert_died()

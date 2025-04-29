@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://5wmpmkmkrwit"]
 
-[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/documents/document_template.tscn" id="1_kq1s7"]
+[ext_resource type="PackedScene" uid="uid://dak0ue81wktnh" path="res://assets/suspects/document_template.tscn" id="1_kq1s7"]
 
 [node name="InterrogationRoom2" type="Node2D"]
 

@@ -2,5 +2,6 @@ extends SuspectTemplate
 class_name Suspect5
 
 func stake():
-	get_parent().robert_alive = false
+	is_vampire = true
+	get_parent().get_parent().robert_alive = false
 	super.stake()
