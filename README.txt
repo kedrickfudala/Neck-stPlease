@@ -1,3 +1,10 @@
+Game Name: Neck-st Please
+Team Members: 
+	- Kedrick Fudala (xfe4qr)
+	- Irene Si (eus2un)
+	- Kemper Arnold (mnv6tm)
+	- Kennedy Gordon (scy9za)
+
 Code used:
 
 Dragging objects: https://www.youtube.com/watch?v=iSpWZzL2i1o

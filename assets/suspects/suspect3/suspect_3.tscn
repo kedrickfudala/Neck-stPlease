@@ -13,7 +13,7 @@
 
 [node name="Suspect3" instance=ExtResource("1_tu7wn")]
 script = ExtResource("2_rgv6i")
-entrance_text = "Let’s make this snappy. My
+entrance_text = "Let's make this snappy. My
 time is too precious to be
 wasted."
 garlic_response = "Eww, get that thing away
@@ -24,8 +24,8 @@ allow_response = "FINALLY. Ugh, I thought I was
 gonna die of old age."
 staked_response = "Oh god, this is how I go?"
 name_response = "Pretty name, isn't it?"
-birth_response = "It’s such a shame; with the
-uprising, there’ll be less
+birth_response = "It's such a shame; with the
+uprising, there'll be less
 people to give me presents…"
 teeth_response = "I got a nice set of pearly
 whites."
@@ -52,9 +52,9 @@ offset_bottom = -43.0
 
 [node name="TextureButton" type="TextureButton" parent="." index="4"]
 offset_left = -25.0
-offset_top = 31.0
+offset_top = 14.0
 offset_right = 15.0
-offset_bottom = 64.0
+offset_bottom = 47.0
 
 [node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)

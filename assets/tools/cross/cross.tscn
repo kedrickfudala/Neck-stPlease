@@ -5,21 +5,22 @@
 
 [node name="cross" type="TextureButton"]
 z_index = 10
-offset_right = 105.0
-offset_bottom = 125.0
+offset_right = 76.0
+offset_bottom = 94.0
 script = ExtResource("2_65gc5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(51, 59)
-scale = Vector2(0.655, 0.655)
+position = Vector2(39, 47)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_j5ssm")
 
 [node name="Label" type="Label" parent="."]
+modulate = Color(0.533333, 0.533333, 0.533333, 1)
 layout_mode = 0
-offset_left = 30.0
-offset_top = 135.0
-offset_right = 95.0
-offset_bottom = 174.0
+offset_left = 20.0
+offset_top = 103.0
+offset_right = 85.0
+offset_bottom = 142.0
 text = "cross
 uses: 1"
 

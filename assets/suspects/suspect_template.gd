@@ -32,7 +32,7 @@ func _ready():
 	$Label.text = str("")
 	$Sprite2D.texture = entrance_expr
 	var move_tween = create_tween()
-	move_tween.tween_property(self, "global_position", Vector2(145, global_position.y), 1.5)
+	move_tween.tween_property(self, "global_position", Vector2(185, global_position.y), 1.5)
 	await move_tween.finished
 	var fade_tween = create_tween()
 	fade_tween.tween_property($Sprite2D, "modulate", Color(1,1,1), 0.8)
@@ -94,7 +94,7 @@ func _on_timer_timeout() -> void:
 		var fade_tween = create_tween()
 		fade_tween.tween_property($Sprite2D, "modulate", Color(0,0,0,1), 0.6)
 		var move_tween = create_tween()
-		move_tween.tween_property(self, "global_position", Vector2(600, global_position.y), 1.5)
+		move_tween.tween_property(self, "global_position", Vector2(700, global_position.y), 1.5)
 		await move_tween.finished
 		get_parent().next_suspect()
 		self.queue_free()
