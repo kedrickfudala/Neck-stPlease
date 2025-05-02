@@ -27,7 +27,7 @@ func next_suspect():
 
 func spawn_suspect(index : int):
 	var suspect_inst = suspects[index].instantiate()
-	suspect_inst.global_position = Vector2(-200,215)
+	suspect_inst.global_position = Vector2(-200,250)
 	add_child(suspect_inst)
 	current_suspect = suspect_inst
 

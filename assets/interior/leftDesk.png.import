@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dteeyq81p1x2m"
-path="res://.godot/imported/IMG_0469.jpg-1cff621d0a974fabbb7cbc50bab7d7a1.ctex"
+uid="uid://dl7eqamr1qoh3"
+path="res://.godot/imported/leftDesk.png-b9f32c7d7749703abf5d28c82684d072.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interior/IMG_0469.jpg"
-dest_files=["res://.godot/imported/IMG_0469.jpg-1cff621d0a974fabbb7cbc50bab7d7a1.ctex"]
+source_file="res://assets/interior/leftDesk.png"
+dest_files=["res://.godot/imported/leftDesk.png-b9f32c7d7749703abf5d28c82684d072.ctex"]
 
 [params]
 

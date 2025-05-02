@@ -6,26 +6,27 @@
 
 [node name="Garlic" type="TextureButton"]
 z_index = 10
-offset_right = 121.0
-offset_bottom = 121.0
+offset_right = 108.0
+offset_bottom = 94.0
 script = ExtResource("2_shhgp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(39, 87)
-scale = Vector2(0.655, 0.655)
+position = Vector2(36, 59)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_tni75")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(90, 48)
-scale = Vector2(0.655, 0.655)
+position = Vector2(78, 33)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_kgpft")
 
 [node name="Label" type="Label" parent="."]
+modulate = Color(0.533333, 0.533333, 0.533333, 1)
 layout_mode = 0
-offset_left = 29.0
-offset_top = 139.0
-offset_right = 118.0
-offset_bottom = 197.0
+offset_left = 28.0
+offset_top = 105.0
+offset_right = 117.0
+offset_bottom = 163.0
 text = "garlic
 uses: 3"
 
