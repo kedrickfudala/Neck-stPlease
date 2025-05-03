@@ -17,16 +17,16 @@ entrance_text = "Let's make this snappy. My
 time is too precious to be
 wasted."
 garlic_response = "Eww, get that thing away
-from me, you weirdo! Before
-its stench ruins my clothes!"
-cross_response = ".....What?"
+from me, you weirdo! The
+stench will ruin my clothes!"
+cross_response = "...What?"
 allow_response = "FINALLY. Ugh, I thought I was
 gonna die of old age."
-staked_response = "Oh god, this is how I go?"
+staked_response = "Oh no, this is how I go...?"
 name_response = "Pretty name, isn't it?"
 birth_response = "It's such a shame; with the
 uprising, there'll be less
-people to give me presents…"
+people to give me presents..."
 teeth_response = "I got a nice set of pearly
 whites."
 documents = Array[PackedScene]([ExtResource("3_76f23")])
@@ -41,14 +41,13 @@ staked_expr = ExtResource("4_p562p")
 teeth_expr = ExtResource("5_6kira")
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(0, -17)
 texture = ExtResource("3_5vit1")
 
 [node name="Label" parent="." index="1"]
-offset_left = 110.0
-offset_top = -99.0
-offset_right = 372.0
-offset_bottom = -43.0
+offset_left = 114.0
+offset_top = -91.0
+offset_right = 376.0
+offset_bottom = -35.0
 
 [node name="TextureButton" type="TextureButton" parent="." index="4"]
 offset_left = -25.0
@@ -59,10 +58,10 @@ offset_bottom = 47.0
 [node name="ColorRect" type="ColorRect" parent="TextureButton" index="0"]
 modulate = Color(0, 1, 0, 0.196078)
 layout_mode = 0
-offset_left = -3.0
-offset_top = -2.0
-offset_right = 39.0
-offset_bottom = 33.0
+offset_left = -2.0
+offset_top = 12.0
+offset_right = 40.0
+offset_bottom = 47.0
 mouse_filter = 2
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

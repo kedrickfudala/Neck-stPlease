@@ -47,6 +47,8 @@ func stake_pressed():
 	if current_suspect:
 		current_suspect.stake()
 
-func game_over():
+func game_over(human_died : bool):
+	if human_died:
+		get_parent().human_died = true
 	get_parent().spawn_game_over_menu()
 	self.queue_free()
