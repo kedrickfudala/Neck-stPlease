@@ -36,10 +36,10 @@ teeth_expr = ExtResource("6_7yaj2")
 texture = ExtResource("3_bd1n6")
 
 [node name="Label" parent="." index="1"]
-offset_left = 129.0
-offset_top = -99.0
-offset_right = 391.0
-offset_bottom = -43.0
+offset_left = 131.0
+offset_top = -84.0
+offset_right = 393.0
+offset_bottom = -28.0
 
 [node name="Timer" parent="." index="2"]
 wait_time = 3.5

@@ -23,9 +23,9 @@ class_name SuspectTemplate
 @export var staked_expr : Texture
 @export var teeth_expr : Texture
 
+@onready var active : bool = true
 @onready var allowed : bool = false
 @onready var staked : bool = false
-@onready var flee : bool = false
 
 func _ready():
 	$Sprite2D.modulate = Color(0,0,0)
@@ -42,43 +42,52 @@ func _ready():
 	spawn_documents()
 
 func ask_garlic():
-	$Label.text = garlic_response
-	$Sprite2D.texture = garlic_expr
-	$Timer.start()
+	if active:
+		$Label.text = garlic_response
+		$Sprite2D.texture = garlic_expr
+		$Timer.start()
 
 func ask_cross():
-	$Label.text = cross_response
-	$Sprite2D.texture = cross_expr
-	$Timer.start()
+	if active:
+		$Label.text = cross_response
+		$Sprite2D.texture = cross_expr
+		$Timer.start()
 
 func ask_name():
-	$Label.text = name_response
-	$Sprite2D.texture = name_expr
-	$Timer.start()
+	if active:
+		$Label.text = name_response
+		$Sprite2D.texture = name_expr
+		$Timer.start()
 
 func ask_birth():
-	$Label.text = birth_response
-	$Sprite2D.texture = birth_expr
-	$Timer.start()
+	if active:
+		$Label.text = birth_response
+		$Sprite2D.texture = birth_expr
+		$Timer.start()
 	
 func ask_teeth():
-	$Label.text = teeth_response
-	$Sprite2D.texture = teeth_expr
-	$Timer.start()
+	if active:
+		$Label.text = teeth_response
+		$Sprite2D.texture = teeth_expr
+		$Timer.start()
 
 func allow():
-	$Label.text = allow_response
-	$Sprite2D.texture = allow_expr
-	allowed = true
-	$Timer.start()
+	if active:
+		active = false
+		$Label.text = allow_response
+		$Sprite2D.texture = allow_expr
+		allowed = true
+		$Timer.start()
 
 func stake():
-	$Label.text = staked_response
-	$Sprite2D.texture = staked_expr
-	var red_tween = create_tween()
-	red_tween.tween_property($Sprite2D, "modulate", Color(1,0,0), $Timer.wait_time)
-	staked = true
-	$Timer.start()
+	if active:
+		active = false
+		$Label.text = staked_response
+		$Sprite2D.texture = staked_expr
+		var red_tween = create_tween()
+		red_tween.tween_property($Sprite2D, "modulate", Color(1,0,0), $Timer.wait_time)
+		staked = true
+		$Timer.start()
 
 func spawn_documents():
 	for d in documents:
@@ -99,10 +108,10 @@ func _on_timer_timeout() -> void:
 		get_parent().next_suspect()
 		self.queue_free()
 		if is_vampire:
-			get_parent().game_over()
+			get_parent().game_over(false)
 	elif staked:
 		if !is_vampire:
-			get_parent().game_over()
+			get_parent().game_over(true)
 		else:
 			for child in $Documents.get_children():
 				$Documents.remove_child(child)
@@ -111,8 +120,5 @@ func _on_timer_timeout() -> void:
 			await vanish_tween.finished
 			get_parent().next_suspect()
 			self.queue_free()
-	elif flee:
-		for child in $Documents.get_children():
-			$Documents.remove_child(child)
 	else:
 		$Sprite2D.texture = idle_expr

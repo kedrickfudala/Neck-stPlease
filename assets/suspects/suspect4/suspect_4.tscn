@@ -16,7 +16,7 @@ script = ExtResource("2_q0iv1")
 is_vampire = true
 entrance_text = "Excuse me... do you have
 room for one more?"
-garlic_response = "Eugh… can you put that away
+garlic_response = "Eugh... can you put that away
 please? Garlic makes me
 nauseous."
 cross_response = "...Is there a reason you're
@@ -26,11 +26,11 @@ cooperation makes this much
 easier."
 staked_response = "You're smarter than I gave
 you credit for. But you still
-can't stop all of us…"
+can't stop all of us..."
 name_response = "Yes, I believe it's Slavic..."
 birth_response = "Some days I feel like I'm too
 young. Then other days, I feel
-like I'm too old"
+like I'm too old."
 teeth_response = "Oh... um...
 My teeth are normal, right?"
 documents = Array[PackedScene]([ExtResource("3_wfllq")])

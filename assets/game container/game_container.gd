@@ -8,6 +8,7 @@ class_name GameContainer
 @onready var victory_screen_scene = preload("res://assets/menus/victory_screen.tscn")
 
 @onready var robert_alive : bool = true
+@onready var human_died : bool = false
 
 func _ready():
 	init()
@@ -37,13 +38,17 @@ func spawn_tutorial():
 	add_child(tutorial_inst)
 
 func spawn_room():
+	human_died = false
 	var room_inst = room_scene.instantiate()
 	room_inst.global_position = Vector2(0,0)
 	add_child(room_inst)
 
 func spawn_game_over_menu():
+	$AudioStreamPlayer2D.stop()
 	get_tree().paused = true
 	var game_over_menu_inst = game_over_menu_scene.instantiate()
+	if human_died:
+		game_over_menu_inst.human_died()
 	add_child(game_over_menu_inst)
 
 func spawn_victory_screen():
