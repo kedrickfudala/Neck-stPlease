@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://iavgj3jvnx2x"]
+[gd_scene load_steps=17 format=3 uid="uid://k5vklr1g0rxl"]
 
 [ext_resource type="Texture2D" uid="uid://f3yilj8voccu" path="res://assets/menus/game_win.PNG" id="1_0kd8g"]
 [ext_resource type="Script" path="res://assets/menus/victory_screen.gd" id="1_w87p7"]
 [ext_resource type="Texture2D" uid="uid://bcwregnfnom8j" path="res://assets/menus/killed_edward_game_end.PNG" id="3_lomuq"]
 [ext_resource type="AudioStream" uid="uid://d0a6r3xb5nc2g" path="res://assets/menus/brass-fanfare-with-timpani-and-winchimes-reverberated-146260.mp3" id="3_rg2a5"]
+[ext_resource type="Texture2D" uid="uid://dfn1x7xjhxd2r" path="res://assets/menus/restart_pink.png" id="4_jpr35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i554l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_geyem"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eku6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cek7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_481a2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kyxuo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxjh1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jbc8y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1502u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlmju"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwkdp"]
 
 [node name="VictoryScreen" type="CanvasLayer"]
 script = ExtResource("1_w87p7")
@@ -20,12 +43,24 @@ scale = Vector2(0.78125, 0.925926)
 texture = ExtResource("3_lomuq")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 319.0
-offset_top = 474.0
-offset_right = 590.0
-offset_bottom = 551.0
+offset_left = 309.0
+offset_top = 453.0
+offset_right = 631.0
+offset_bottom = 590.0
+scale = Vector2(0.9, 0.9)
 theme_override_font_sizes/font_size = 61
-text = "Main Menu"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i554l")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_geyem")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eku6x")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_8cek7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_481a2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_kyxuo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gxjh1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jbc8y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1502u")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dlmju")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gwkdp")
+icon = ExtResource("4_jpr35")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_rg2a5")
