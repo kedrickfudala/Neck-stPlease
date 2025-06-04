@@ -20,13 +20,19 @@ position = Vector2(78, 33)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_kgpft")
 
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(79, 85)
+rotation = -0.785397
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_tni75")
+
 [node name="Label" type="Label" parent="."]
 modulate = Color(0.533333, 0.533333, 0.533333, 1)
 layout_mode = 0
-offset_left = 28.0
-offset_top = 105.0
-offset_right = 117.0
-offset_bottom = 163.0
+offset_left = 27.0
+offset_top = 116.0
+offset_right = 116.0
+offset_bottom = 174.0
 text = "garlic
 uses: 3"
 

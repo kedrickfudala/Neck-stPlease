@@ -15,10 +15,10 @@ entrance_text = "Hey, could you let me in?
 Here's my ID"
 garlic_response = "Why are you offering me garlic?"
 cross_response = "Oh, are you religious too?"
-allow_response = "Thanks, I knew I could rely on you"
+allow_response = "Thanks, I knew I could rely on you!"
 staked_response = "Why... what did I do...?"
-name_response = "Yep, thats my name"
-birth_response = "Born and raised here in Kedricksville"
+name_response = "Yep, thats my name."
+birth_response = "Born and raised here in Kedricksville!"
 teeth_response = "My teeth?
 I ain't got any fangs, see?"
 documents = Array[PackedScene]([ExtResource("2_xxsgj")])
