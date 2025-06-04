@@ -1,17 +1,30 @@
 extends TextureButton
 class_name GarlicTool
 
-@onready var uses : int = 2
+@onready var uses : int = 3
 @onready var hovered : bool = false
 
 func _physics_process(_delta: float) -> void:
 	$Label.text = str("Garlic")
 	$Label.text += str("\nUses: ") + str(uses)
 	$Label.visible = hovered
-	if uses > 1:
-		$Sprite2D2.visible = true
-	else:
-		$Sprite2D2.visible = false
+	match(uses):
+		3:
+			$Sprite2D.visible = true
+			$Sprite2D2.visible = true
+			$Sprite2D3.visible = true
+		2:
+			$Sprite2D.visible = true
+			$Sprite2D2.visible = true
+			$Sprite2D3.visible = false
+		1:
+			$Sprite2D.visible = true
+			$Sprite2D2.visible = false
+			$Sprite2D3.visible = false
+		0:
+			$Sprite2D.visible = false
+			$Sprite2D2.visible = false
+			$Sprite2D3.visible = false
 
 func _on_pressed() -> void:
 	get_parent().garlic_pressed()

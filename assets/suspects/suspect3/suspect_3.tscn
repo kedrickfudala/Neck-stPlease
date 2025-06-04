@@ -13,22 +13,25 @@
 
 [node name="Suspect3" instance=ExtResource("1_tu7wn")]
 script = ExtResource("2_rgv6i")
-entrance_text = "Let's make this snappy. My
-time is too precious to be
-wasted."
-garlic_response = "Eww, get that thing away
-from me, you weirdo! The
-stench will ruin my clothes!"
-cross_response = "...What?"
-allow_response = "FINALLY. Ugh, I thought I was
-gonna die of old age."
+entrance_text = "Hey, I heard this place
+is safe. Can you just let
+me in already?"
+garlic_response = "Eww, I hate the smell of
+garlic! Can you put that
+thing away?"
+cross_response = "...What? Why would I
+want that?"
+allow_response = "UGH, FINALLY! I thought 
+I was going to die of old age!"
 staked_response = "Oh no, this is how I go...?"
-name_response = "Pretty name, isn't it?"
-birth_response = "It's such a shame; with the
-uprising, there'll be less
-people to give me presents..."
-teeth_response = "I got a nice set of pearly
-whites."
+name_response = "Pretty name, isn't it?
+People always confuse it
+for \"Carmilla\"!"
+birth_response = "You know, you're not 
+supposed to ask a girl 
+her age..."
+teeth_response = "Yeah, I got a nice set of
+pearly whites."
 documents = Array[PackedScene]([ExtResource("3_76f23")])
 entrance_expr = ExtResource("2_74l4q")
 idle_expr = ExtResource("3_5vit1")
